@@ -3,6 +3,7 @@
 # AWS
 .amplifyrc
 /amplify
+/src/aws-exports.js
 
 # dependencies
 /node_modules
