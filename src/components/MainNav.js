@@ -17,6 +17,7 @@ const MainNav = () => {
           <li><Link to="/hello">Hello</Link></li>
           <li><Link to="/hello/goodmorning">Hello good morning</Link></li>
           <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/admin">Admin</Link></li>
         </ul>
       </nav>
   );

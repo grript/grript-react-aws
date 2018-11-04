@@ -19,6 +19,11 @@ import Home from './Home';
 
 
 import MainNav from './MainNav';
+import PrivateRoute from './PrivateRoute';
+
+import Login, { fakeAuth } from './Login'; 
+
+import Admin from './Admin';
 
 class App extends Component {
   render() {
@@ -38,6 +43,8 @@ class App extends Component {
               <Route exact path="/hello" component={Hello} />
               <Route path="/hello/goodmorning" component={HelloGoodMorning} />
               <Route path="/contact" component={Contact} />
+              <Route path="/login" component={Login} />
+              <PrivateRoute authed={fakeAuth.isAuthenticated} path="/admin" component={Admin} />
             </Switch>
           </main>
         </div>
