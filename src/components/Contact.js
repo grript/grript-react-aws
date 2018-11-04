@@ -6,6 +6,7 @@ import {
   Switch,
   Redirect
 } from 'react-router-dom';
+import ContactChild from './ContactChild';
 
 const Contact = ({ match }) => {
   return (
@@ -20,6 +21,7 @@ const Contact = ({ match }) => {
             <Route path={`${match.path}/sales`} render={() => { return <h1>Sales Page</h1> }}/>
             <Route path={`${match.path}/support`} render={() => { return <h1>Support Page</h1> }}/>
             <Route path={`${match.path}/customer-service`} render={() => { return <h1>Customer Service Page</h1> }}/>
+            <Route path={`${match.path}/:id`} component={ContactChild} />
           </div>
       </div>
   );
