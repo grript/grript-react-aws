@@ -12,6 +12,8 @@ import {
 } from 'react-router-dom'
 
 import About from './About';
+import Hello from './Hello';
+import Contact from './Contact';
 
 class App extends Component {
   render() {
@@ -23,15 +25,17 @@ class App extends Component {
 
             <nav className="nav-primary" aria-label="Primary Navigation">
               <ul>
-                <li><a href="">Hello</a></li>
                 <li><Link to="/about">About</Link></li>
-                <li><a href="">Contact</a></li>
+                <li><Link to="/hello">Hello</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
               </ul>
             </nav>
           </header>
           <main>
             {/* Routes will go here */}
             <Route path="/about" component={About} />
+            <Route path="/hello" component={Hello} />
+            <Route path="/contact" component={Contact} />
           </main>
         </div>
       </Router>  
