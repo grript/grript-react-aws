@@ -11,7 +11,8 @@ import {
   Redirect
 } from 'react-router-dom';
 
-import MainNav from './MainNav';
+import NavMain from './NavMain';
+import NavMainIcon from './NavMainIcon';
 import RoutesTopLevel from './RoutesTopLevel';
 
 
@@ -22,11 +23,18 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <MainNav /> 
+            <NavMain />
+            <NavMainIcon />
 
           </header>
+          <div className="header-height"></div>
+          <section role="navigation" className="nav-sidebar">
+             
+          </section>
           <main>
-            <RoutesTopLevel />
+            <div className="container center container-mobile">
+              <RoutesTopLevel />
+            </div>  
           </main>
         </div>
       </Router>  
