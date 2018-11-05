@@ -1,9 +1,15 @@
 import React from 'react';
 import styled from "styled-components";
 
+
+let handleClick = (_event, _self) => {
+  console.log("hambureger icon is clicked!");
+  document.documentElement.classList.toggle('mobile-sidebar-is-open');
+}
+
 const HamburgerIcon = () => {
   return (
-    <HamburgerIconTag onClick>
+    <HamburgerIconTag onClick={handleClick}>
       <div className="hamburger-icon">
         <div></div>
         <div></div>
