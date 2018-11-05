@@ -1,6 +1,3 @@
-.App {
-  text-align: center;
-}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -29,8 +26,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.nav-primary ul li a {
-  color: #fff;
 }

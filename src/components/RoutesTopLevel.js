@@ -16,6 +16,7 @@ import Home from './Home';
 import PrivateRoute from './PrivateRoute';
 import Login, { fakeAuth } from './Login'; 
 import Admin from './Admin';
+import Demos from './Demos';
 
 const RoutesTopLevel = () => {
   return (
@@ -27,6 +28,7 @@ const RoutesTopLevel = () => {
         <Route path="/hello/goodmorning" component={HelloGoodMorning} />
         <Route path="/contact" component={Contact} />
         <Route path="/login" component={Login} />
+        <Route path="/demos" component={Demos} />
         <PrivateRoute authed={fakeAuth.isAuthenticated} path="/admin" component={Admin} />
       </Switch>
     </div>
