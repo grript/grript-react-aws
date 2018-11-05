@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
+
 import './App.css';
 
 // import route Components here
@@ -11,8 +11,7 @@ import {
   Redirect
 } from 'react-router-dom';
 
-import NavMain from './NavMain';
-import NavMainIcon from './NavMainIcon';
+import Header from './Header';
 import RoutesTopLevel from './RoutesTopLevel';
 
 
@@ -21,12 +20,7 @@ class App extends Component {
     return (
       <Router>      
         <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <NavMain />
-            <NavMainIcon />
-
-          </header>
+          <Header />
           <div className="header-height"></div>
           <section role="navigation" className="nav-sidebar">
              
