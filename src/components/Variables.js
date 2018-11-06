@@ -9,3 +9,6 @@ export const BpPhoneLandscape = '560px';
 export const BpTablet = '769px';
 export const BpDesktop = '960px';
 export const BpDesktopLg = '1200px';
+
+//classes 
+export const ClassToggleSideBar = 'mobile-sidebar-is-open';

@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from "styled-components";
 import { ColorBgMobileSidebar } from './Variables'; 
+import { ClassToggleSideBar } from  './Variables';
 
 let handleClick = (_event, _self) => {
   console.log("BUttonSideBar icon is clicked!");
-  document.documentElement.classList.toggle('mobile-sidebar-is-open');
+  document.documentElement.classList.toggle(ClassToggleSideBar);
 }
 
 const ButtonCloseSideBar = () => {
   return (
-    <CloseSideBarIcon className="close-menu-icon" onClick={handleClick} bgColor={ColorBgMobileSidebar} />
+    <CloseSideBarIcon className="close-menu-icon" onClick={handleClick} bgColor={ColorBgMobileSidebar} classToggleSideBar={ClassToggleSideBar}/>
   );
 }
 export default ButtonCloseSideBar;
@@ -39,7 +40,7 @@ const CloseSideBarIcon = styled.div`
     cursor: pointer;
   }
 
-  html.mobile-sidebar-is-open & {
+  html.${props => props.classToggleSideBar} & {
     transform: rotate(0deg);
     transition: transform .75s ease;
     width: 40px;

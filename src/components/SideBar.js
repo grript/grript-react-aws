@@ -1,17 +1,14 @@
 import React from 'react';
 import styled from "styled-components";
 import NavMain from './NavMain';
-import { ColorBgMobileSidebar } from './Variables'; 
+import { ColorBgMobileSidebar } from './Variables';
+import { ClassToggleSideBar } from  './Variables';
 import ButtonCloseSideBar from './ButtonCloseSideBar';
 
-let handleClick = (_event, _self) => {
-  console.log("close icon is clicked!");
-  document.documentElement.classList.toggle('mobile-sidebar-is-open');
-}
 
 const SideBar = () => {
   return (
-      <SideBarTag  className="sidebar" role="navigation" aria-label="Sidebar navigation" bgColor={ColorBgMobileSidebar}>
+      <SideBarTag  className="sidebar" role="navigation" aria-label="Sidebar navigation" bgColor={ColorBgMobileSidebar} classToggleSideBar={ClassToggleSideBar}>
         <SideBarTagInner className="sidebar-inner">
           <NavMain />
         </SideBarTagInner>
@@ -35,7 +32,7 @@ const SideBarTag = styled.section`
   ul li {
     margin: 12px 0;
   }
-  html.mobile-sidebar-is-open & {
+  html.${props => props.classToggleSideBar} & {
     width: 180px;
     transition: all .3s ease;
   }

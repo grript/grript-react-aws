@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
+import { ClassToggleSideBar } from  './Variables';
 
+const class_name = ClassToggleSideBar;
 
 let handleClick = (_event, _self) => {
   console.log("hambureger icon is clicked!");
-  document.documentElement.classList.toggle('mobile-sidebar-is-open');
+  document.documentElement.classList.toggle(class_name);
 }
 
 const ButtonHamburger = () => {
@@ -32,18 +34,6 @@ const HamburgerIconWrapper = styled.div`
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-
-  .hamburger-icon {
-    margin-top: 4px;
-    & > div {
-      height: 3px;
-      margin-bottom: 3px;
-      background-color: #fff;
-    }
-    & > div:last-child {
-      margin-bottom: 0;
-    }
-  }
 `;
 
 const HamburgerIconTag = styled.div`
@@ -59,11 +49,9 @@ const HamburgerIconTag = styled.div`
 `;
 
 const HamburgerIconOneBar = styled.div`
-
-
-    height: 3px;
-    margin-bottom: 3px;
-    background-color: #fff;
+  height: 3px;
+  margin-bottom: 3px;
+  background-color: #fff;
 
   &:last-child {
     margin-bottom: 0;
