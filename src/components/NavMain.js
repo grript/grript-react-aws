@@ -36,10 +36,9 @@ export default NavMain;
 // 'css in js' styling 
 const MainNavUl = styled.ul`
   list-style-type: none;
-  padding: 1em 1.5em;
   margin: 0;
   @media (min-width: 900px) {
-    display: flex;
+    // display: flex;
   }
 `;
 const MainNavLink = styled.li`
@@ -56,9 +55,9 @@ const MainNavLink = styled.li`
 
 const MainNavTag = styled.nav`
   position: relative;
-  position: absolute;
-  right: 0;
-  top: 50px;
-  min-width: 180px;
-  background-color: ${props => props.bgColor};
+  // position: absolute;
+  // right: 0;
+  // top: 50px;
+  // min-width: 180px;
+  // background-color: ${props => props.bgColor};
 `;

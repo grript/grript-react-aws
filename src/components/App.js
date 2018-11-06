@@ -12,6 +12,7 @@ import {
 } from 'react-router-dom';
 
 import Header from './Header';
+import SideBar from './SideBar';
 import RoutesTopLevel from './RoutesTopLevel';
 
 
@@ -22,9 +23,7 @@ class App extends Component {
         <div className="App">
           <Header />
           <div className="header-height"></div>
-          <section role="navigation" className="nav-sidebar">
-             
-          </section>
+          <SideBar />
           <main>
             <div className="container center container-mobile">
               <RoutesTopLevel />

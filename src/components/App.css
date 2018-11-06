@@ -48,3 +48,7 @@
   padding-left: 25px;
   padding-right: 25px;
 }
+
+html.mobile-sidebar-is-open {
+  overflow: hidden;
+}

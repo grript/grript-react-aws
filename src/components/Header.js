@@ -1,15 +1,15 @@
 import React from 'react';
 import logo from '../logo.svg';
-import NavMain from './NavMain';
+import NavHeader from './NavHeader';
 import NavMainIcon from './NavMainIcon';
-import HamburgerIcon from './HamburgerIcon';
+import ButtonHamburger from './ButtonHamburger';
 
 const Header = () => {
   return (
     <header className="App-header">
-      <HamburgerIcon />
+      <ButtonHamburger />
       <img src={logo} className="App-logo" alt="logo" />
-      <NavMain />
+      <NavHeader />
       <NavMainIcon />
 
     </header>
