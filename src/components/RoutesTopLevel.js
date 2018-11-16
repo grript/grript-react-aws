@@ -17,6 +17,8 @@ import Login, { fakeAuth } from './Login';
 import Admin from './Admin';
 import Demos from './Demos';
 import LayoutContainer2 from './LayoutContainer2';
+import LayoutSimple from './LayoutSimple';
+import LayoutWithHeader from './LayoutWithHeader';
 
 const RoutesTopLevel = () => {
   return (
@@ -28,6 +30,8 @@ const RoutesTopLevel = () => {
         <Route path="/contact" component={Contact} />
         <Route path="/login" component={Login} />
         <Route path="/demos" component={Demos} />
+        <Route path="/layout-simple" component={LayoutSimple} />
+        <Route path="/layout-with-header" component={LayoutWithHeader} />
         <Route path="/layout2" component={LayoutContainer2} />
         <PrivateRoute authed={fakeAuth.isAuthenticated} path="/admin" component={Admin} />
       </Switch>

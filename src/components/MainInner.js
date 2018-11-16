@@ -4,11 +4,11 @@ import styled from "styled-components"
 import RoutesTopLevel from './RoutesTopLevel';
 
 
-const MainInner = () => {
+const MainInner = (props) => {
   return (
     <div className="main-inner">
       <div className="container center container-mobile">
-        <RoutesTopLevel />
+        {props.children}
       </div>  
     </div>
   );

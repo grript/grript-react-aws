@@ -17,6 +17,7 @@ import { HeaderHeightPhone } from './Variables';
 import { HeaderHeightTablet } from './Variables';
 import { HeaderHeightDesktop } from './Variables';
 import SideBarWithHover from './SideBarWithHover';
+import About from './About';
 
 const LayoutContainer2 = () => {
   
@@ -28,7 +29,9 @@ const LayoutContainer2 = () => {
       <div className="header-height"></div>
       
       <MainTag bpDesktopLg={BpDesktopLg}>
-        <MainInner />
+        <MainInner >
+          <About />
+        </MainInner >  
       </MainTag>
       <StyledSideBar className="sidebar" id="sidebar" bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop} > 
         <SideBarWithHover>   
