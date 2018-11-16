@@ -1,13 +1,13 @@
 import React from 'react';
 import HeaderSimple from './HeaderSimple';
-import ContentSimple from './ContentSimple';
+import RoutesContent from './RoutesContent';
 
 const LayoutWithHeader = () => {
   return (
     <main>
       <HeaderSimple />
       <div className="container">
-        <ContentSimple />
+        <RoutesContent />
       </div>  
     </main>
   );
