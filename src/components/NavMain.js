@@ -37,6 +37,7 @@ export default NavMain;
 const MainNavUl = styled.ul`
   list-style-type: none;
   margin: 0;
+  padding: 0;
   @media (min-width: 900px) {
     // display: flex;
   }

@@ -4,16 +4,15 @@ import NavHeader from './NavHeader';
 import NavMainIcon from './NavMainIcon';
 import ButtonHamburger from './ButtonHamburger';
 
-const Header = () => {
+const HeaderInner = () => {
   return (
-    <header className="header-wrapper">
+    <div className="header-inner">
       <ButtonHamburger />
       <img src={logo} className="App-logo" alt="logo" />
       <NavHeader />
       <NavMainIcon />
 
-    </header>
+    </div>
   );
 }
-
-export default Header;
+export default HeaderInner;

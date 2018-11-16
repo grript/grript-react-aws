@@ -11,24 +11,18 @@ import {
   Redirect
 } from 'react-router-dom';
 
-import Header from './Header';
-import SideBar from './SideBar';
-import RoutesTopLevel from './RoutesTopLevel';
+import { ClassLayoutMainDesktop } from './Variables';
+// import LayoutContainer1 from  './LayoutContainer1';
+import LayoutContainer2 from  './LayoutContainer2';
 
+const class_name = ClassLayoutMainDesktop;
 
 class App extends Component {
   render() {
     return (
       <Router>      
-        <div className="App">
-          <Header />
-          <div className="header-height"></div>
-          <SideBar />
-          <main>
-            <div className="container center container-mobile">
-              <RoutesTopLevel />
-            </div>  
-          </main>
+        <div className={`App  ${class_name}`}>
+          <LayoutContainer2 />
         </div>
       </Router>  
     );
