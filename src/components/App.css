@@ -29,7 +29,7 @@ p {
 }
 
 .page-title {
-  margin-top: 0;
+  margin-top: 1em;
 }
 
 @keyframes App-logo-spin {
@@ -56,6 +56,12 @@ p {
   .container {
     padding-left: 30px;
     padding-right: 30px;
+  }  
+}
+@media (min-width: 760px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
   }  
 }
 

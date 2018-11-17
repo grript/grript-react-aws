@@ -10,13 +10,14 @@ import {
 import LayoutContainer2 from './LayoutContainer2';
 import LayoutSimple from './LayoutSimple';
 import LayoutWithHeader from './LayoutWithHeader';
+import LayoutWithNavDropdown from './LayoutWithNavDropdown';
 
 const RoutesLayout = () => {
   return (
     <div>
       <Switch>
         <Route exact={true} path="/" component={LayoutWithHeader} />
-        <Route path="/about" component={LayoutWithHeader} />
+        <Route path="/about" component={LayoutWithNavDropdown} />
         <Route path="/blog" component={LayoutWithHeader} />
         <Route path="/contact" component={LayoutWithHeader} />
         <Route path="/login" component={LayoutWithHeader} />
