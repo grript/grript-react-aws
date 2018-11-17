@@ -30,6 +30,7 @@ const RoutesContent = () => {
         <Route path="/demos" component={Demos} />
         <Route path="/layout-with-header" component={ContentSimple} />
         <Route path="/layout-with-nav-dropdown" component={ContentSimple} />
+        <Route path="/layout-left-drawer" component={ContentSimple} />
         <PrivateRoute authed={fakeAuth.isAuthenticated} path="/admin" component={Admin} />
       </Switch>
     </div>

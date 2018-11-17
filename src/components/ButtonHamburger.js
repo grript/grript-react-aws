@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
-import { ClassToggleSideBar } from  './Variables';
+import { ClassToggleHamburger } from  './Variables';
+import { BpNavLeftDrawer } from  './Variables';
 
-const class_name = ClassToggleSideBar;
+const class_name = ClassToggleHamburger;
 
 let handleClick = (_event, _self) => {
-  console.log("hambureger icon is clicked!");
+  console.log("hamburger icon is clicked!");
   document.documentElement.classList.toggle(class_name);
 }
 
@@ -21,6 +22,16 @@ const ButtonHamburger = () => {
   );
 }
 export default ButtonHamburger;
+
+
+export const ButtonHamburgerHideOnDesktop = () => {
+  return (
+    <StyledButtonHamburgerHideOnDesktop bpNavLeftDrawer={BpNavLeftDrawer}>
+      <ButtonHamburger />
+    </StyledButtonHamburgerHideOnDesktop>
+  );
+}
+
 
 // 'css in js' styling 
 const HamburgerIconWrapper = styled.div`
@@ -55,5 +66,12 @@ const HamburgerIconOneBar = styled.div`
 
   &:last-child {
     margin-bottom: 0;
+  }
+`;
+
+const StyledButtonHamburgerHideOnDesktop = styled.div`
+ 
+  @media (min-width:${props => props.bpNavLeftDrawer}) {
+    display: none;
   }
 `;

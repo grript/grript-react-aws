@@ -10,6 +10,7 @@ export const ColorBgHeader = ColorPrimary;
 export const ColorBgMobileSidebar = ColorSecondary;
 export const ColorFooterText = ColorMidnightBlueContrast;
 export const ColorFooterBg = ColorMidnightBlue;
+export const ColorBgNavLeftDrawer = ColorGrayDark;
 
 
 // breakpoints
@@ -18,11 +19,15 @@ export const BpTablet = '769px';
 export const BpDesktop = '960px';
 export const BpDesktopLg = '1200px';
 export const BpNavDropdown = BpDesktop;
+export const BpNavHamburger = BpDesktop;
+export const BpNavLeftDrawer = BpDesktop;
+
 // ToggleMenu classes 
 export const ClassToggleSideBarSwipeLeftOnly = 'toggle-for-sidebar-has-been-clicked';
 export const ClassToggleSideBarSwipeLeftAndAsLeftColumnOnDesktop = 'sidebar-as-left-column-on-desktop-is-open';
 export const ClassToggleSideBar = ClassToggleSideBarSwipeLeftOnly;
 export const ClassToggleNavDropdown = 'nav-dropdown-is-clicked';
+export const ClassToggleHamburger = 'nav-hamburger-trigger-is-clicked';
 
 // layout 
 export const ClassLayoutMainDesktop = 'sidebar-is-left-column-on-desktop';
