@@ -9,7 +9,7 @@ import { HeaderHeightDesktop } from './Variables';
 
 const HeaderHeight = () => {
   return (
-    <StyledHeaderHeight  className="header-height" bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>>
+    <StyledHeaderHeight  className="header-height" bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
     </StyledHeaderHeight>
   );
 }

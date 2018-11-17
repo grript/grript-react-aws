@@ -43,3 +43,8 @@ export const HeaderHeightDesktop = '50px';
 export const WidthSideBarPhone = '180px';
 export const WidthSideBarTablet = '250px';
 export const WidthSideBarDesktop = '300px';
+
+// logo width
+export const LogoWidthPhone = '30px';
+export const LogoWidthTablet = '40px';
+export const LogoWidthDesktop = '50px';

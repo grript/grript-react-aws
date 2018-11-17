@@ -39,13 +39,18 @@ const StyledNavNavLeftDrawer = styled.div`
   transition: .5s all ease;
   width: 0;
   padding: 1em 0;
-  overflow: hidden;
+  overflow-x: hidden;
   a {
     padding: 0 1.5em;
   }
   ul {
     display: flex;
     flex-direction: column;
+    
+  }
+  nav {
+    overflow-y: auto;
+    margin-bottom: 70px;
   }
   html.nav-hamburger-trigger-is-clicked & {
     width: 160px;
@@ -69,6 +74,9 @@ const StyledNavNavLeftDrawer = styled.div`
     height: auto;
     position: relative;
     padding: 0;
+    nav {
+      margin-bottom: 0;
+    }
     ul {
       flex-direction: row;
     }

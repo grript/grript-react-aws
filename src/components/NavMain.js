@@ -50,7 +50,7 @@ const MainNavLink = styled.li`
   }
 
   @media (min-width: 900px) {
-    margin: 0 1em;
+    // margin: 0 1em;
   }
 `;
 

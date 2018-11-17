@@ -8,6 +8,7 @@ const class_name = ClassToggleHamburger;
 let handleClick = (_event, _self) => {
   console.log("hamburger icon is clicked!");
   document.documentElement.classList.toggle(class_name);
+  document.documentElement.classList.toggle('overflow-hidden');
 }
 
 const ButtonHamburger = () => {
@@ -70,7 +71,6 @@ const HamburgerIconOneBar = styled.div`
 `;
 
 const StyledButtonHamburgerHideOnDesktop = styled.div`
- 
   @media (min-width:${props => props.bpNavLeftDrawer}) {
     display: none;
   }

@@ -1,29 +1,23 @@
 import React from 'react';
-import { BpPhoneLandscape } from './Variables';
+import styled from "styled-components";
 import { BpTablet } from './Variables';
 import { BpDesktop } from './Variables';
 import { BpDesktopLg } from './Variables';
 import { HeaderHeightPhone } from './Variables';
 import { HeaderHeightTablet } from './Variables';
 import { HeaderHeightDesktop } from './Variables';
-import { ColorBgNavLeftDrawer } from './Variables';
 import { ButtonHamburgerHideOnDesktop } from './ButtonHamburger';
-import Branding from './Branding';
-import styled from "styled-components";
+import BrandingForNavLeftDrawer  from './BrandingForNavLeftDrawer';
 import NavLeftDrawer from './NavLeftDrawer';
 
 const HeaderWithHamburgerIcon = () => {
   return (
-    <StyledHeader className="header-wrapper"  bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
-      <div className="container-header">
-        <StyledBranding bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
-          <Branding />
-        </StyledBranding>   
-
+    <StyledHeader className="header-wrapper rocks5"  bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
+      <StyledHeaderContainer className="container-header rocks6">
+        <BrandingForNavLeftDrawer />
         <NavLeftDrawer />
-
         <ButtonHamburgerHideOnDesktop />
-      </div>  
+      </StyledHeaderContainer>  
     </StyledHeader>
   );
 }
@@ -55,15 +49,23 @@ const StyledHeader = styled.header`
   }
 `;
 
-const StyledBranding = styled.div`
-  width: 30px;
-  height: 21px;
-  margin-left: 30px;
-  @media (min-width: ${props => props.bpDesktop}) {
-    width: 50px;
-    height: 33px;
-  }   
+const StyledHeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
 `;
+
+// const StyledBranding = styled.div`
+//   width: 30px;
+//   height: 21px;
+//   margin-left: 30px;
+//   @media (min-width: ${props => props.bpDesktop}) {
+//     width: 50px;
+//     height: 33px;
+//   }   
+// `;
 
 
 
