@@ -15,7 +15,7 @@ import styled from "styled-components";
 const HeaderWithNavDropdown = () => {
   return (
     <StyledHeader className="header-wrapper"  bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
-      <div className="container">
+      <div className="container-header">
         <StyledLogo bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
           <img src={logo} className="App-logo" alt="logo" />
         </StyledLogo>   
@@ -46,7 +46,7 @@ const StyledHeader = styled.header`
   @media (min-width: ${props => props.bpDesktopLg}) {
     height: ${props => props.headerHeightDesktop};
   }   
-  .container {
+  .container-header {
     display: flex;
     align-items: center;
     justify-content: space-between;

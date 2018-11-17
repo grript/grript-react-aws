@@ -64,6 +64,12 @@ p {
     padding-right: 0;
   }  
 }
+.container-header {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
 
 .center {
   margin-right: auto;

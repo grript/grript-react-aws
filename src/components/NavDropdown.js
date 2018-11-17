@@ -52,7 +52,7 @@ const MainNavLink = styled.li`
 const MainNavTag = styled.nav`
   position: relative;
   background-color: ${props => props.colorBgNavDropdown};
-  min-width: 120px;
+  min-width: 160px;
   @media (min-width: ${props => props.bpNavDropdown}) {
     background-color: transparent;
   }  

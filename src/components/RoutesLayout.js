@@ -24,6 +24,7 @@ const RoutesLayout = () => {
         <Route path="/demos" component={LayoutWithHeader} />
         <Route path="/layout-simple" component={LayoutSimple} />
         <Route path="/layout-with-header" component={LayoutWithHeader} />
+        <Route path="/layout-with-nav-dropdown" component={LayoutWithNavDropdown} />
         <Route path="/layout2" component={LayoutContainer2} />
       </Switch>
     </div>

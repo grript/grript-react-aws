@@ -5,7 +5,6 @@ import React from 'react';
 const ContentSimple = () => {
   return (
     <div>
-      <h1>Page Title</h1>
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac venenatis tellus. Vivamus maximus consequat leo, eu pellentesque nulla fermentum nec. Donec ullamcorper lorem vitae risus aliquet sagittis. Integer sit amet turpis id tellus dapibus pellentesque ut at massa. Nunc id metus in elit iaculis venenatis et sed nunc. Etiam consectetur lectus eget nibh semper porta. Morbi et sodales neque. Quisque fermentum nisl ex, ut hendrerit libero sollicitudin vel. Integer consequat eros in purus scelerisque, a ultrices mi tincidunt. Suspendisse maximus tincidunt magna, facilisis commodo nisl volutpat ut. Curabitur id scelerisque tortor, a fringilla dolor. Nam bibendum varius lorem a rutrum. Aenean non ex mattis, faucibus arcu sed, aliquam nisi. Pellentesque felis justo, tincidunt a lacus nec, vulputate cursus urna.
       </p>
