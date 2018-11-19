@@ -7,7 +7,7 @@ import { BpDesktopLg } from './Variables';
 import { HeaderHeightPhone } from './Variables';
 import { HeaderHeightTablet } from './Variables';
 import { HeaderHeightDesktop } from './Variables';
-import { BpNavDropdown } from './Variables';
+import { BpNavDropdown, ClassToggleNavDropdown } from './Variables';
 import NavDropdown from './NavDropdown';
 import ButtonDownArrow from './ButtonDownArrow';
 import styled from "styled-components";
@@ -19,7 +19,7 @@ const HeaderWithNavDropdown = () => {
         <StyledLogo bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
           <img src={logo} className="App-logo" alt="logo" />
         </StyledLogo>   
-        <StyledNav bpNavDropdown={BpNavDropdown}>
+        <StyledNav className="nav-dropdown-wrapper" bpNavDropdown={BpNavDropdown} classToggleNavDropdown={ClassToggleNavDropdown}>
           <NavDropdown />
         </StyledNav>
         <ButtonDownArrow />
@@ -65,23 +65,7 @@ const StyledLogo = styled.div`
 `;
 
 const StyledNav = styled.div`
-  position: absolute;
-  top: 100%;
-  right: 0;
-  max-height: 0;
-  padding: 0;
-  overflow: hidden;
-  transition: .5s all ease;
-
-  html.nav-dropdown-trigger-is-clicked & {
-    max-height: 1000px;
-    transition: .5s all ease;
-  }
-  @media (min-width: ${props => props.bpNavDropdown}) {
-    position: relative;
-    max-height: none;
-    top: auto;
-  }
+ 
 `;
 
 

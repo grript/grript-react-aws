@@ -28,7 +28,7 @@ export const BpNavLeftDrawerDesktop = '1350px';
 // ToggleMenu classes 
 export const ClassToggleSidebarSwipeLeftOnly = 'toggle-for-sidebar-has-been-clicked';
 export const ClassToggleSidebarSwipeLeftAndAsLeftColumnOnDesktop = 'sidebar-as-left-column-on-desktop-is-open';
-export const ClassToggleNavDropdown = 'nav-dropdown-is-clicked';
+export const ClassToggleNavDropdown = 'nav-dropdown-trigger-is-clicked';
 export const ClassToggleHamburger = 'nav-hamburger-trigger-is-clicked';
 export const ClassToggleHamburgerMobile = 'nav-hamburger-trigger-is-clicked-on-mobile';
 export const ClassToggleHamburgerDesktop = 'nav-hamburger-trigger-is-clicked-on-desktop';

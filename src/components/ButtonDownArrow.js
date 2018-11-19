@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import { ClassToggleNavDropdown } from  './Variables';
 import { BpNavDropdown } from './Variables';
 
 class ButtonDownArrow extends React.Component {

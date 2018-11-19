@@ -10,10 +10,15 @@ import {
 
 import { ColorBgNavDropdown } from './Variables'; 
 
-
+let handleMouseEnter = (_event, _self) => {
+  document.documentElement.classList.add('overflow-hidden');
+}  
+let handleMouseLeave = (_event, _self) => {
+  document.documentElement.classList.remove('overflow-hidden');
+}  
 const NavDropdown = () => {
   return (
-      <MainNavTag className="nav-primary" aria-label="Primary Navigation" colorBgNavDropdown={ColorBgNavDropdown} bpNavDropdown={BpNavDropdown} >
+      <MainNavTag className="nav-primary" aria-label="Primary Navigation" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} colorBgNavDropdown={ColorBgNavDropdown} bpNavDropdown={BpNavDropdown} >
         <MainNavUl bpNavDropdown={BpNavDropdown}>
           <MainNavLink><Link to="/">Home</Link></MainNavLink>
           <MainNavLink><Link to="/about">About</Link></MainNavLink>
