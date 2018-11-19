@@ -7,14 +7,14 @@ import { HeaderHeightPhone } from './Variables';
 import { HeaderHeightTablet } from './Variables';
 import { HeaderHeightDesktop } from './Variables';
 import { ButtonHamburgerHideOnDesktop } from './ButtonHamburger';
-import BrandingForNavLeftDrawer  from './BrandingForNavLeftDrawer';
+import { BrandingWithHamburgerOnMobileOnly }  from './Branding';
 import NavLeftDrawer from './NavLeftDrawer';
 
 const HeaderWithHamburgerIcon = () => {
   return (
     <StyledHeader className="header-wrapper rocks5"  bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
       <StyledHeaderContainer className="container-header rocks6">
-        <BrandingForNavLeftDrawer />
+        <BrandingWithHamburgerOnMobileOnly />
         <NavLeftDrawer />
         <ButtonHamburgerHideOnDesktop />
       </StyledHeaderContainer>  

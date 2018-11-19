@@ -8,7 +8,7 @@ import { BpTablet, BpDesktop } from './Variables';
 
 const BrandingForNavLeftDrawer = () => {
   return (
-    <StyledBrandingForNavLeftDrawer  className="branding branding-rocks33" bpNavLeftDrawer={BpNavLeftDrawer} bpTablet={BpTablet} bpDesktop={BpDesktop}>
+    <StyledBrandingForNavLeftDrawer  className="branding" bpNavLeftDrawer={BpNavLeftDrawer} bpTablet={BpTablet} bpDesktop={BpDesktop}>
       <Branding />
     </StyledBrandingForNavLeftDrawer>
   );  

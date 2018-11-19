@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
 import NavMain from './NavMain';
-import { ColorBgMobileSidebar } from './Variables'; 
+import { ColorBgSidebarMobile } from './Variables'; 
 
 const NavHeader = () => {
   return (
-      <NavHeaderTag bgColor={ColorBgMobileSidebar}>
+      <NavHeaderTag bgColor={ColorBgSidebarMobile}>
         <NavMain />
       </NavHeaderTag>  
   );

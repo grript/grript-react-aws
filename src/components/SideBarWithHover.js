@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-class SideBarWithHover extends React.Component {
+class SidebarWithHover extends React.Component {
   constructor(props){
     super(props);
 
@@ -32,17 +32,17 @@ class SideBarWithHover extends React.Component {
   
   render() {
     return (
-      <StyledSideBarWithHover className="sidebar-hover" id="sidebar-hover" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} onClick={this.handleClick} boolVar={this.state.boolVar} >
+      <StyledSidebarWithHover className="sidebar-hover" id="sidebar-hover" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} onClick={this.handleClick} boolVar={this.state.boolVar} >
         {this.props.children}
-      </StyledSideBarWithHover> 
+      </StyledSidebarWithHover> 
 
 
     );
   }
 }
 
-export default SideBarWithHover;
+export default SidebarWithHover;
 
-const StyledSideBarWithHover = styled.div`
+const StyledSidebarWithHover = styled.div`
 
 `;

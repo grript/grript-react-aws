@@ -3,17 +3,17 @@ import styled from "styled-components";
 
 import RoutesTopLevel from './RoutesTopLevel';
 import { BpDesktop } from './Variables';
-import { ClassToggleSideBar } from './Variables';
+import { ClassToggleSidebar } from './Variables';
 import { WidthLayoutMainDesktop } from './Variables';
 
-//     classToggleSideBar={ClassToggleSideBar} 
+//     classToggleSidebar={ClassToggleSidebar} 
 // bpDesktop={BpDesktop} 
 // headerHeightDesktop={HeaderHeightDesktop} 
-// widthSideBarDesktop={WidthSideBarDesktop}>
+// widthSidebarDesktop={WidthSidebarDesktop}>
 
-const MainWithLeftSideBar = () => {
+const MainWithLeftSidebar = () => {
   return (
-    <MainTag className="main-content with-left-sidebar" bpDesktop={BpDesktop} WidthLayoutMainDesktop={WidthLayoutMainDesktop} ClassToggleSideBar={ClassToggleSideBar}>
+    <MainTag className="main-content with-left-sidebar" bpDesktop={BpDesktop} WidthLayoutMainDesktop={WidthLayoutMainDesktop} ClassToggleSidebar={ClassToggleSidebar}>
       <div className="container center container-mobile">
         <RoutesTopLevel />
       </div>  
@@ -21,7 +21,7 @@ const MainWithLeftSideBar = () => {
   );
 }
 
-export default MainWithLeftSideBar;
+export default MainWithLeftSidebar;
 
 // 'css in js' styling 
 const MainTag = styled.main`
@@ -30,7 +30,7 @@ const MainTag = styled.main`
     float: right;
 
 
-    html.${props => props.ClassToggleSideBar} & {
+    html.${props => props.ClassToggleSidebar} & {
       width: auto;
       float: none;
     }

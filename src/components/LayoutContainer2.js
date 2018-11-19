@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 import HeaderInner from './HeaderInner';
 import MainInner from './MainInner';
-import SideBarInner from './SideBarInner';
+import SidebarInner from './SidebarInner';
 import FooterInner from './FooterInner';
 import { BpPhoneLandscape } from './Variables';
 import { BpTablet } from './Variables';
@@ -16,7 +16,7 @@ import { BpDesktopLg } from './Variables';
 import { HeaderHeightPhone } from './Variables';
 import { HeaderHeightTablet } from './Variables';
 import { HeaderHeightDesktop } from './Variables';
-import SideBarWithHover from './SideBarWithHover';
+import SidebarWithHover from './SidebarWithHover';
 import About from './About';
 
 const LayoutContainer2 = () => {
@@ -33,11 +33,11 @@ const LayoutContainer2 = () => {
           <About />
         </MainInner >  
       </MainTag>
-      <StyledSideBar className="sidebar" id="sidebar" bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop} > 
-        <SideBarWithHover>   
-          <SideBarInner />
-        </SideBarWithHover>
-      </StyledSideBar>
+      <StyledSidebar className="sidebar" id="sidebar" bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop} > 
+        <SidebarWithHover>   
+          <SidebarInner />
+        </SidebarWithHover>
+      </StyledSidebar>
       <FooterTag>
         <FooterInner />
       </FooterTag>  
@@ -50,7 +50,7 @@ export default LayoutContainer2;
 const StyledLayouContainer2 = styled.div`
 
 `;
-const StyledSideBar = styled.section`
+const StyledSidebar = styled.section`
   background-color: blue;
   position: fixed;
   top: ${props => props.headerHeightPhone};
@@ -98,7 +98,7 @@ const MainTag = styled.main`
   }  
 `;
 
-const SideBarTag = styled.section`
+const SidebarTag = styled.section`
   height: 100%;
   overflow: hidden;
 `;

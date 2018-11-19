@@ -1,35 +1,28 @@
 import React from 'react';
 import styled from "styled-components"
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch,
-  Redirect
-} from 'react-router-dom';
+import { NavMainStyled } from './NavMain';
 
 import { ColorBgSidebarMobile } from './Variables'; 
 
-// const RenderedComponentDemo = () => <ComponentDemo>Hello Demos!</ComponentDemo>;
 
 
-const NavSimple = () => {
+const NavSidebar = () => {
   return (
       <MainNavTag className="nav-primary" aria-label="Primary Navigation" bgColor={ColorBgSidebarMobile}>
-        <MainNavUl>
-          <MainNavLink><Link to="/">Home</Link></MainNavLink>
-          <MainNavLink><Link to="/about">About</Link></MainNavLink>
-          <MainNavLink><Link to="/blog">Blog</Link></MainNavLink>
-          <MainNavLink><Link to="/contact">Contact</Link></MainNavLink>
-        </MainNavUl>
+        <NavMainStyled />
       </MainNavTag>
   );
 }
 
 
 
-export default NavSimple;
+export default NavSidebar;
+
+
+export const NavSidebarStyled = () => {
+
+}
+
 
 // 'css in js' styling 
 const MainNavUl = styled.ul`

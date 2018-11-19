@@ -12,6 +12,7 @@ import LayoutSimple from './LayoutSimple';
 import LayoutWithHeader from './LayoutWithHeader';
 import LayoutWithNavDropdown from './LayoutWithNavDropdown';
 import LayoutNavLeftDrawer from './LayoutNavLeftDrawer';
+import LayoutSidebarDrawerLeft from './LayoutSidebarDrawerLeft';
 
 const RoutesLayout = () => {
   return (
@@ -27,6 +28,7 @@ const RoutesLayout = () => {
         <Route path="/layout-with-header" component={LayoutWithHeader} />
         <Route path="/layout-with-nav-dropdown" component={LayoutWithNavDropdown} />
         <Route path="/layout-left-drawer" component={LayoutNavLeftDrawer} />
+        <Route path="/layout-sidebar-drawer" component={LayoutSidebarDrawerLeft} />
         <Route path="/layout2" component={LayoutContainer2} />
       </Switch>
     </div>

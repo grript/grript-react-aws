@@ -4,18 +4,18 @@
 import React from 'react';
 import Header from './Header';
 import Main from './Main';
-import MainWithLeftSideBar from './MainWithLeftSideBar';
-// import SideBar froim './SideBar'
-import SideBarAsLeftColumnOnDesktop from './SideBarAsLeftColumnOnDesktop';
+import MainWithLeftSidebar from './MainWithLeftSidebar';
+// import Sidebar froim './Sidebar'
+import SidebarAsLeftColumnOnDesktop from './SidebarAsLeftColumnOnDesktop';
 
 const Home = () => {
   return (
     <div>
       <Header />
       <div className="header-height"></div>
-      {/* <SideBar /> */}
-      <SideBarAsLeftColumnOnDesktop />
-      <MainWithLeftSideBar />
+      {/* <Sidebar /> */}
+      <SidebarAsLeftColumnOnDesktop />
+      <MainWithLeftSidebar />
     </div>  
   );
 }

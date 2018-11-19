@@ -50,9 +50,25 @@ const MainNavLink = styled.li`
 `;
 
 const MainNavTag = styled.nav`
-  position: relative;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: .5s all ease;
   background-color: ${props => props.colorBgNavDropdown};
-  min-width: 160px;
+
+  html.nav-dropdown-trigger-is-clicked & {
+    max-height: 500px;
+    transition: .5s all ease;
+  }
+  @media (min-width: ${props => props.bpNavDropdown}) {
+    position: relative;
+    max-height: none;
+    top: auto;
+  }
+
   @media (min-width: ${props => props.bpNavDropdown}) {
     background-color: transparent;
   }  

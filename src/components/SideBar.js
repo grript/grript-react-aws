@@ -1,26 +1,26 @@
 import React from 'react';
 import styled from "styled-components";
 import NavMain from './NavMain';
-import { ColorBgMobileSidebar } from './Variables';
-import { ClassToggleSideBar } from  './Variables';
-import ButtonCloseSideBar from './ButtonCloseSideBar';
+import { ColorBgSidebarMobile } from './Variables';
+import { ClassToggleSidebar } from  './Variables';
+import ButtonCloseSidebar from './ButtonCloseSidebar';
 
 
-const SideBar = () => {
+const Sidebar = () => {
   return (
-      <SideBarTag  className="sidebar" role="navigation" aria-label="Sidebar navigation" bgColor={ColorBgMobileSidebar} classToggleSideBar={ClassToggleSideBar}>
-        <SideBarTagInner className="sidebar-inner">
+      <SidebarTag  className="sidebar" role="navigation" aria-label="Sidebar navigation" bgColor={ColorBgSidebarMobile} classToggleSidebar={ClassToggleSidebar}>
+        <SidebarTagInner className="sidebar-inner">
           <NavMain />
-        </SideBarTagInner>
-        <ButtonCloseSideBar />
-      </SideBarTag>
+        </SidebarTagInner>
+        <ButtonCloseSidebar />
+      </SidebarTag>
   );
 }
 
-export default SideBar;
+export default Sidebar;
 
 // 'css in js' styling 
-const SideBarTag = styled.section`
+const SidebarTag = styled.section`
   background-color: ${props => props.bgColor};
   width: 0;
   position: fixed;
@@ -32,13 +32,13 @@ const SideBarTag = styled.section`
   ul li {
     margin: 12px 0;
   }
-  html.${props => props.classToggleSideBar} & {
+  html.${props => props.classToggleSidebar} & {
     width: 180px;
     transition: all .3s ease;
   }
 `;
 
-const SideBarTagInner = styled.div`
+const SidebarTagInner = styled.div`
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
