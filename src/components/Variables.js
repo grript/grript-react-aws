@@ -12,6 +12,7 @@ export const ColorBgSidebarDesktop = ColorGrayDark;
 export const ColorFooterText = ColorMidnightBlueContrast;
 export const ColorFooterBg = ColorMidnightBlue;
 export const ColorBgNavLeftDrawer = ColorGrayDark;
+export const ColorBgLinkHoverNavSideDrawer = '#555';
 
 
 // breakpoints

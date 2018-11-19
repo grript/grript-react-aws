@@ -6,17 +6,19 @@ import { BpDesktopLg } from './Variables';
 import { HeaderHeightPhone } from './Variables';
 import { HeaderHeightTablet } from './Variables';
 import { HeaderHeightDesktop } from './Variables';
-import { ButtonHamburgerHideOnDesktop } from './ButtonHamburger';
-import { BrandingWithHamburgerOnMobileOnly }  from './Branding';
+import ButtonHamburger from './ButtonHamburger';
+import { BrandingWrapped }  from './Branding';
 import NavLeftDrawer from './NavLeftDrawer';
 
 const HeaderWithHamburgerIcon = () => {
   return (
-    <StyledHeader className="header-wrapper rocks5"  bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
-      <StyledHeaderContainer className="container-header rocks6">
-        <BrandingWithHamburgerOnMobileOnly />
+    <StyledHeader className="header-wrapper"  bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
+      <StyledHeaderContainer className="container-header">
+        <ButtonHamburger />
+        <StyledBranding className="branding-wrapper">
+          <BrandingWrapped />
+        </StyledBranding>  
         <NavLeftDrawer />
-        <ButtonHamburgerHideOnDesktop />
       </StyledHeaderContainer>  
     </StyledHeader>
   );
@@ -57,18 +59,10 @@ const StyledHeaderContainer = styled.div`
   position: relative;
 `;
 
-// const StyledBranding = styled.div`
-//   width: 30px;
-//   height: 21px;
-//   margin-left: 30px;
-//   @media (min-width: ${props => props.bpDesktop}) {
-//     width: 50px;
-//     height: 33px;
-//   }   
-// `;
-
-
-
-
-
-
+const StyledBranding = styled.div`
+  position: absolute;
+  left: 50px;
+  @media (min-width: ${props => props.bpDesktop}) {
+    
+  }
+`;

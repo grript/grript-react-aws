@@ -14,24 +14,43 @@ import { BpDesktopLg } from './Variables';
 import { HeaderHeightPhone } from './Variables';
 import { HeaderHeightTablet } from './Variables';
 import { HeaderHeightDesktop } from './Variables';
-import { ColorBgNavLeftDrawer, BpNavLeftDrawer } from './Variables'; 
+import { ClassToggleHamburgerMobile } from './Variables';
+import { ColorBgLinkHoverNavSideDrawer, ColorBgNavLeftDrawer, BpNavLeftDrawer } from './Variables'; 
 
 
+class NavLeftDrawer extends React.Component {
+  constructor(props){
+    super(props);
 
-const NavNavLeftDrawer = () => {
-  return (
-      <StyledNavNavLeftDrawer className="nav-primary nav-left-drawer" aria-label="Primary Navigation" colorBgNavLeftDrawer={ColorBgNavLeftDrawer} bpNavLeftDrawer={BpNavLeftDrawer} bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
+
+    this.state = {
+      boolVar: false
+    };
+  }
+
+  handleMouseEnter() {
+    document.documentElement.classList.add('overflow-hidden');
+  }  
+  handleMouseLeave() {
+    document.documentElement.classList.remove('overflow-hidden');
+  }  
+
+  render() {
+    return (
+      <StyledNavLeftDrawer className="nav-primary nav-left-drawer" aria-label="Primary Navigation" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} colorBgLinkHoverNavSideDrawer={ColorBgLinkHoverNavSideDrawer} classToggleHamburgerMobile={ClassToggleHamburgerMobile} colorBgNavLeftDrawer={ColorBgNavLeftDrawer} bpNavLeftDrawer={BpNavLeftDrawer} bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
         <NavMain />
-      </StyledNavNavLeftDrawer>
-  );
+      </StyledNavLeftDrawer>
+    );
+  }
 }
 
+export default NavLeftDrawer;
 
-
-export default NavNavLeftDrawer;
 
 // 'css in js' styling 
-const StyledNavNavLeftDrawer = styled.div`
+const StyledNavLeftDrawer = styled.div`
   position: fixed;
   height: 100%;
   left: 0;
@@ -41,18 +60,26 @@ const StyledNavNavLeftDrawer = styled.div`
   padding: 1em 0;
   overflow-x: hidden;
   a {
-    padding: 0 1.5em;
+    padding: 5px 1.5em;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      background-color: ${props => props.colorBgLinkHoverNavSideDrawer};
+    }
   }
   ul {
     display: flex;
     flex-direction: column;
-    
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 90px 0;
   }
   nav {
     overflow-y: auto;
     margin-bottom: 70px;
   }
-  html.nav-hamburger-trigger-is-clicked & {
+  html.${ props => props.classToggleHamburgerMobile} & {
     width: 160px;
     transition: .5s all ease;
   }
@@ -62,6 +89,9 @@ const StyledNavNavLeftDrawer = styled.div`
   }
   @media (min-width: ${props => props.bpDesktop}) {
     top: ${props => props.headerHeightTablet};
+    ul {
+      margin: 0;
+    }
   } 
   @media (min-width: ${props => props.bpDesktopLg}) {
     top: ${props => props.headerHeightDesktop};
@@ -72,7 +102,8 @@ const StyledNavNavLeftDrawer = styled.div`
     top: auto;
     width: auto;
     height: auto;
-    position: relative;
+    position: absolute;
+    left: auto;
     padding: 0;
     nav {
       margin-bottom: 0;
@@ -80,7 +111,7 @@ const StyledNavNavLeftDrawer = styled.div`
     ul {
       flex-direction: row;
     }
-    html.nav-hamburger-trigger-is-clicked & {
+    html.${ props => props.classToggleHamburgerMobile} & {
       width: auto;
     }  
   }    

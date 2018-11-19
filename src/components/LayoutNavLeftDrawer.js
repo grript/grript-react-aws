@@ -5,7 +5,7 @@ import RoutesContent from './RoutesContent';
 
 const LayoutNavLeftDrawer = () => {
   return (
-    <div>
+    <div className="layout-nav-left-drawer">
       <HeaderWithHamburgerIcon />
       <HeaderHeight />
       <main>
