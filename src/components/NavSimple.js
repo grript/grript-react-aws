@@ -4,7 +4,7 @@ import styled from "styled-components"
 import {
   BrowserRouter as Router,
   Route,
-  Link,
+  NavLink, Link,
   Switch,
   Redirect
 } from 'react-router-dom';
@@ -18,10 +18,10 @@ const NavSimple = () => {
   return (
       <MainNavTag className="nav-primary" aria-label="Primary Navigation" bgColor={ColorBgSidebarMobile}>
         <MainNavUl>
-          <MainNavLink><Link to="/">Home</Link></MainNavLink>
-          <MainNavLink><Link to="/about">About</Link></MainNavLink>
-          <MainNavLink><Link to="/blog">Blog</Link></MainNavLink>
-          <MainNavLink><Link to="/contact">Contact</Link></MainNavLink>
+          <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/">Home</NavLink></MainNavLink>
+          <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/about">About</NavLink></MainNavLink>
+          <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/blog">Blog</NavLink></MainNavLink>
+          <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/contact">Contact</NavLink></MainNavLink>
         </MainNavUl>
       </MainNavTag>
   );

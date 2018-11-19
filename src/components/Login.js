@@ -3,7 +3,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
+  NavLink, Link,
   Switch,
   Redirect
 } from 'react-router-dom';

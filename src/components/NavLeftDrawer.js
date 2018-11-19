@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {
   BrowserRouter as Router,
   Route,
-  Link,
+  NavLink, Link,
   Switch,
   Redirect
 } from 'react-router-dom';

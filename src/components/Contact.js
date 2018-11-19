@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
+  NavLink, Link,
   Switch,
   Redirect
 } from 'react-router-dom';
@@ -13,9 +13,9 @@ const Contact = ({ match }) => {
       <div className="contact">
           <h1 className="page-title">Contact Us</h1>
           <ul>
-              <li><Link to={`${match.url}/sales`}>Sales</Link></li>
-              <li><Link to={`${match.url}/support`}>Support</Link></li>
-              <li><Link to={`${match.url}/customer-service`}>Customer Service</Link></li>
+              <li><NavLink exact={true} activeClassName='is-active' to={`${match.url}/sales`}>Sales</NavLink></li>
+              <li><NavLink exact={true} activeClassName='is-active' to={`${match.url}/support`}>Support</NavLink></li>
+              <li><NavLink exact={true} activeClassName='is-active' to={`${match.url}/customer-service`}>Customer Service</NavLink></li>
           </ul>
           <div>
             <Route path={`${match.path}/sales`} render={() => { return <h1>Sales Page</h1> }}/>

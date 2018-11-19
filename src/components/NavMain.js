@@ -4,7 +4,7 @@ import styled from "styled-components"
 import {
   BrowserRouter as Router,
   Route,
-  Link,
+  NavLink, Link,
   Switch,
   Redirect
 } from 'react-router-dom';
@@ -16,12 +16,12 @@ import { ColorBgSidebarMobile } from './Variables';
 const NavMain = () => {
   return (
     <ul className="nav-primary" aria-label="Primary Navigation">
-      <MainNavLink><Link to="/">Home</Link></MainNavLink>
-      <MainNavLink><Link to="/about">About</Link></MainNavLink>
-      <MainNavLink><Link to="/blog">Blog</Link></MainNavLink>
-      <MainNavLink><Link to="/contact">Contact</Link></MainNavLink>
-      <MainNavLink><Link to="/admin">Admin</Link></MainNavLink>
-      <MainNavLink><Link to="/demos">Demos</Link></MainNavLink>
+      <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/">Home</NavLink></MainNavLink>
+      <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/about">About</NavLink></MainNavLink>
+      <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/blog">Blog</NavLink></MainNavLink>
+      <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/contact">Contact</NavLink></MainNavLink>
+      <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/admin">Admin</NavLink></MainNavLink>
+      <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/demos">Demos</NavLink></MainNavLink>
     </ul>
   );
 }

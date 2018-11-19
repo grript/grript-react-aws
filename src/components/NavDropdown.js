@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from "styled-components"
-import { BpNavDropdown } from './Variables';
+import { BpNavDropdown, ColorBgIsActiveLink } from './Variables';
 
 import {
   BrowserRouter as Router,
   Route,
-  Link,
+  NavLink, Link,
 } from 'react-router-dom';
 
 import { ColorBgNavDropdown } from './Variables'; 
@@ -18,12 +18,12 @@ let handleMouseLeave = (_event, _self) => {
 }  
 const NavDropdown = () => {
   return (
-      <MainNavTag className="nav-primary" aria-label="Primary Navigation" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} colorBgNavDropdown={ColorBgNavDropdown} bpNavDropdown={BpNavDropdown} >
-        <MainNavUl bpNavDropdown={BpNavDropdown}>
-          <MainNavLink><Link to="/">Home</Link></MainNavLink>
-          <MainNavLink><Link to="/about">About</Link></MainNavLink>
-          <MainNavLink><Link to="/blog">Blog</Link></MainNavLink>
-          <MainNavLink><Link to="/contact">Contact</Link></MainNavLink>
+      <MainNavTag className="nav-primary" aria-label="Primary Navigation" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} colorBgNavDropdown={ColorBgNavDropdown} bpNavDropdown={BpNavDropdown}>
+        <MainNavUl bpNavDropdown={BpNavDropdown} colorBgIsActiveLink={ColorBgIsActiveLink}>
+          <MainNavLink><NavLink exact={true} activeClassName='is-active' exact={true} activeClassName='is-active' to="/">Home</NavLink></MainNavLink>
+          <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/about">About</NavLink></MainNavLink>
+          <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/blog">Blog</NavLink></MainNavLink>
+          <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/contact">Contact</NavLink></MainNavLink>
         </MainNavUl>
       </MainNavTag>
   );
@@ -40,6 +40,9 @@ const MainNavUl = styled.ul`
   padding: 1em 0;
   display: flex;
   flex-direction: column;
+  a.is-active {
+    background-color: ${props => props.colorBgIsActiveLink};
+  }
   @media (min-width: ${props => props.bpNavDropdown}) {
     flex-direction: row;
   }  
@@ -52,6 +55,7 @@ const MainNavLink = styled.li`
     padding: 0 1em;
     display: block;
   }
+
 `;
 
 const MainNavTag = styled.nav`
