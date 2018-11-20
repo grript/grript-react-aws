@@ -54,6 +54,9 @@ export const WidthSidebarTablet = '250px';
 export const WidthSidebarDesktop = '300px';
 
 // logo width
-export const LogoWidthPhone = '30px';
+export const LogoWidthPhone = '37px';
+export const LogoHeightPhone = '27px';
 export const LogoWidthTablet = '40px';
+export const LogoHeightTablet = '28px';
 export const LogoWidthDesktop = '50px';
+export const LogoHeightDesktop = '33px';

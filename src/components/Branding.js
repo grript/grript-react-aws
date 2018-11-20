@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from '../logo.svg';
 import styled from "styled-components";
-import { LogoWidthPhone, LogoWidthTablet, LogoWidthDesktop } from './Variables';   
-import { BpTablet, BpDesktop } from './Variables';   
+import { LogoWidthPhone, LogoWidthTablet, LogoWidthDesktop, LogoHeightPhone, LogoHeightTablet, LogoHeightDesktop } from './Variables';   
+import { BpTablet, BpDesktop, BpDesktopLg } from './Variables';   
 import { BpNavLeftDrawer } from './Variables'; 
 
 const Branding = () => {
@@ -14,7 +14,7 @@ export default Branding;
 
 export const BrandingWrapped = () => {
   return (
-    <StyledBranding className="site-logo">
+    <StyledBranding className="site-logo" bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} logoWidthPhone={LogoWidthPhone} logoWidthTablet={LogoWidthTablet} logoWidthDesktop={LogoWidthDesktop} logoHeightPhone={LogoHeightPhone} logoHeightTablet={LogoHeightTablet} logoHeightDesktop={LogoHeightDesktop}>
       <Branding />  
     </StyledBranding>
   );
@@ -22,19 +22,19 @@ export const BrandingWrapped = () => {
 
 // 'css in js' styling 
 const StyledBranding = styled.div`
-  width: 37px;
-  height: 28px;
+  width: ${props => props.logoWidthPhone};
+  height: ${props => props.logoHeightPhone};
   img {
     max-width: 100%;
   }
   @media (min-width: ${props => props.bpDesktop}) {
-    width: 40px;
-    height: 27px;
+    width: ${props => props.logoWidthTablet};
+    height: ${props => props.logoHeightTablet};
   }   
 
   @media (min-width: ${props => props.bpDesktopLg}) {
-    width: 50px;
-    height: 33px;
+    width: ${props => props.logoWidthDesktop};
+    height: ${props => props.logoHeightDesktop};
   } 
 
 `;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderDefault, HeaderContainer } from './Header';
+import Header, { HeaderContainer } from './Header';
 import { BrandingWrapped } from './Branding';
 import NavDropdown from './NavDropdown';
 import ButtonDownArrow from './ButtonDownArrow';
@@ -9,13 +9,13 @@ import RoutesContent from './RoutesContent';
 const LayoutNavDropdown = () => {
   return (
     <div className="layout-nav-dropdown">
-      <HeaderDefault>
+      <Header>
         <HeaderContainer>
           <BrandingWrapped />
           <NavDropdown />
           <ButtonDownArrow />
         </HeaderContainer>  
-      </HeaderDefault>
+      </Header>
       <Main>
         <MainContainer>
           <RoutesContent />

@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../logo.svg';
-import NavHeader from './NavHeader';
-import NavMainIcon from './NavMainIcon';
 import ButtonHamburger from './ButtonHamburger';
 import { BpTablet } from './Variables';
 import { BpDesktop } from './Variables';
@@ -13,29 +11,15 @@ import { HeaderHeightDesktop } from './Variables';
 import { WidthContainerHeader } from './Variables';
 
 
-const Header = () => {
-  return (
-    <StyledHeader className="header-wrapper">
-      <ButtonHamburger />
-      <img src={logo} className="App-logo" alt="logo" />
-      <NavHeader />
-      <NavMainIcon />
-
-    </StyledHeader>
-  );
-}
-
-export default Header;
-
-
-
-export const HeaderDefault = (props) => {
+const Header = (props) => {
   return (
     <StyledHeader className="header-wrapper" bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
       {props.children}
     </StyledHeader>
-  );  
+  ); 
 }
+
+export default Header;
 
 const StyledHeader = styled.header`
   background-color: #000;
