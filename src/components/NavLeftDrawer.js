@@ -107,8 +107,5 @@ const StyledNavLeftDrawer = styled.nav`
       width: auto;
     }  
   }  
-  @media (min-width: ${props => props.bpDesktopLg}) {
-    top: ${props => props.headerHeightDesktop};
-  }   
 
 `;

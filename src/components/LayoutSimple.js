@@ -1,14 +1,15 @@
 import React from 'react';
+import Main, { MainContainer } from './Main';
 import ContentSimple from './ContentSimple';
 
 const LayoutSimple = () => {
   
   return (
-    <main>
-      <div className="container">
+    <Main>
+      <MainContainer>
         <ContentSimple />
-      </div>
-    </main>  
+      </MainContainer>
+    </Main>
   );
 }
 export default LayoutSimple;
