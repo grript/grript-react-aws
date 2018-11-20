@@ -1,16 +1,25 @@
 import React from 'react';
-import HeaderSimple from './HeaderSimple';
+import { HeaderDefault, HeaderContainer } from './Header';
+import { BrandingWrapped } from './Branding';
+import NavSimple from './NavSimple';
+import Main, { MainContainer } from './Main';
 import RoutesContent from './RoutesContent';
 
 const LayoutNavSimple = () => {
   return (
-    <div>
-      <HeaderSimple />
-      <main>
-        <div className="container">
+    <div className="layout-nav-simple">
+      <HeaderDefault>
+        <HeaderContainer>
+          <BrandingWrapped />
+          <NavSimple />
+        </HeaderContainer>  
+      </HeaderDefault>
+
+      <Main>
+        <MainContainer>
           <RoutesContent />
-        </div>  
-      </main>
+        </MainContainer>
+      </Main>
     </div>  
   );
 }

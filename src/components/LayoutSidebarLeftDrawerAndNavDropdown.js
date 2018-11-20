@@ -7,7 +7,7 @@ import ButtonDownArrow from './ButtonDownArrow';
 import HeaderHeight from './HeaderHeight';
 import { SidebarFixed, SidebarInner } from './Sidebar';
 import NavSidebar from './NavSidebar';
-import { MainWithLeftSidebar } from './Main';
+import { MainWithLeftSidebarDrawer } from './Main';
 
 const LayoutSidebarLeftDrawerAndNavDropdown = () => {
   return (
@@ -27,7 +27,7 @@ const LayoutSidebarLeftDrawerAndNavDropdown = () => {
             <NavSidebar />
           </SidebarInner>
         </SidebarFixed>
-        <MainWithLeftSidebar />
+        <MainWithLeftSidebarDrawer />
       </div>
   );
 }

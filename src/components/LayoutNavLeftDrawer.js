@@ -1,18 +1,29 @@
 import React from 'react';
-import HeaderWithHamburgerIcon from './HeaderWithHamburgerIcon';
+import { HeaderFixed, HeaderContainer } from './Header';
+import ButtonHamburger from './ButtonHamburger';
 import HeaderHeight from './HeaderHeight';
+import Main, { MainContainer } from './Main';
 import RoutesContent from './RoutesContent';
+import { BrandingWithHamburgerAlways }  from './Branding';
+import NavLeftDrawer from './NavLeftDrawer';
 
 const LayoutNavLeftDrawer = () => {
   return (
     <div className="layout-nav-left-drawer">
-      <HeaderWithHamburgerIcon />
+      <HeaderFixed>
+        <HeaderContainer>
+          <ButtonHamburger />
+          <BrandingWithHamburgerAlways />
+          <NavLeftDrawer />
+        </HeaderContainer>  
+      </HeaderFixed>
+
       <HeaderHeight />
-      <main>
-        <div className="container">
+      <Main>
+        <MainContainer>
           <RoutesContent />
-        </div>  
-      </main>
+        </MainContainer>
+      </Main>
     </div>  
   );
 }

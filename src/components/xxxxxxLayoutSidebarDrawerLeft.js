@@ -3,7 +3,7 @@ import ContentSimple from './ContentSimple';
 import HeaderHeight from './HeaderHeight';
 import SidebarAsLeftColumnOnDesktop from './SidebarAsLeftColumnOnDesktop';
 import HeaderFixedWithHamburgerAndDropdown from './HeaderFixedWithHamburgerAndDropdown';
-import { MainWithLeftSidebar } from './Main';
+import { MainWithLeftSidebarDrawer } from './Main';
 
 const LayoutSidebarDrawerLeft = () => {
   
@@ -12,7 +12,7 @@ const LayoutSidebarDrawerLeft = () => {
       <HeaderFixedWithHamburgerAndDropdown />
       <HeaderHeight />
       <SidebarAsLeftColumnOnDesktop />
-      <MainWithLeftSidebar /> 
+      <MainWithLeftSidebarDrawer /> 
     </div>
   );
 }

@@ -2,33 +2,49 @@ import React from 'react';
 import styled from "styled-components"
 import { BpNavLeftDrawer, BpNavLeftDrawerDesktop } from './Variables';
 import RoutesContent from './RoutesContent';
-import { ClassToggleHamburgerDesktop } from './Variables';
+import { WidthContainer, BpPhoneLandscape, ClassToggleHamburgerDesktop } from './Variables';
 
 
-const Main = () => {
+const Main = (props) => {
   return (
     <main className="main">
-      <div className="container center container-mobile">
-        <RoutesContent />
-      </div>  
+      {props.children} 
     </main>
   );
 }
 
 export default Main;
 
-export const MainWithLeftSidebar = (props) => {
+export const MainContainer = (props) => {
   return (
-    <StyledMainWithLeftSidebar className="main" bpNavLeftDrawer={BpNavLeftDrawer} bpNavLeftDrawerDesktop={BpNavLeftDrawerDesktop} classToggleHamburgerDesktop={ClassToggleHamburgerDesktop} bpNavLeftDrawerDesktop={BpNavLeftDrawerDesktop}>
+    <StyledMainContainer className="main-container" widthContainer={WidthContainer} bpPhoneLandscape={BpPhoneLandscape}>
+      {props.children}
+    </StyledMainContainer>
+  );
+}
+
+const StyledMainContainer = styled.div`
+  max-width: ${props => props.widthContainer};
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  @media (min-width: ${props => props.bpPhoneLandscape}) {
+    padding: 0 25px;
+  }
+`;
+
+export const MainWithLeftSidebarDrawer = (props) => {
+  return (
+    <StyledMainWithLeftSidebarDrawer className="main" bpNavLeftDrawer={BpNavLeftDrawer} bpNavLeftDrawerDesktop={BpNavLeftDrawerDesktop} classToggleHamburgerDesktop={ClassToggleHamburgerDesktop} >
       <div className="container center container-mobile">
         <RoutesContent />
         {props.children}
       </div>  
-    </StyledMainWithLeftSidebar>
+    </StyledMainWithLeftSidebarDrawer>
   );
 }
 
-const StyledMainWithLeftSidebar = styled.main`
+const StyledMainWithLeftSidebarDrawer = styled.main`
   @media (min-width:${props => props.bpNavLeftDrawer}) {
     margin-left: 300px;
     transition: .75s all ease;

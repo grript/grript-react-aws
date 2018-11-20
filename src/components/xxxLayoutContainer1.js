@@ -4,7 +4,7 @@
 import React from 'react';
 import Header from './Header';
 import Main from './Main';
-import MainWithLeftSidebar from './MainWithLeftSidebar';
+import MainWithLeftSidebarDrawer from './MainWithLeftSidebarDrawer';
 // import Sidebar froim './Sidebar'
 import SidebarAsLeftColumnOnDesktop from './SidebarAsLeftColumnOnDesktop';
 
@@ -15,7 +15,7 @@ const Home = () => {
       <div className="header-height"></div>
       {/* <Sidebar /> */}
       <SidebarAsLeftColumnOnDesktop />
-      <MainWithLeftSidebar />
+      <MainWithLeftSidebarDrawer />
     </div>  
   );
 }

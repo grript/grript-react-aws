@@ -40,6 +40,8 @@ export const ClassLayoutMainDesktop = 'sidebar-is-left-column-on-desktop';
 export const WidthLayoutSidebarTablet = '30%';
 export const WidthLayoutSidebarDesktop = '30%';
 export const WidthLayoutMainDesktop = '70%';
+export const WidthContainer = '700px';
+export const WidthContainerHeader = '900px';
 
 // Header Height
 export const HeaderHeightPhone = '30px';

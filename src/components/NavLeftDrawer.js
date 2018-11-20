@@ -1,12 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {
-  BrowserRouter as Router,
-  Route,
-  NavLink, Link,
-  Switch,
-  Redirect
-} from 'react-router-dom';
 import NavMain from './NavMain';
 import { BpTablet } from './Variables';
 import { BpDesktop } from './Variables';
@@ -50,7 +43,7 @@ export default NavLeftDrawer;
 
 
 // 'css in js' styling 
-const StyledNavLeftDrawer = styled.div`
+const StyledNavLeftDrawer = styled.nav`
   position: fixed;
   height: 100%;
   left: 0;
@@ -85,7 +78,7 @@ const StyledNavLeftDrawer = styled.div`
   }
   top: ${props => props.headerHeightPhone};
   @media (min-width: ${props => props.bpTablet}) {
-    top: ${props => props.headerHeightPhone};
+    top: ${props => props.headerHeightTablet};
   }
   @media (min-width: ${props => props.bpDesktop}) {
     top: ${props => props.headerHeightTablet};
@@ -93,9 +86,7 @@ const StyledNavLeftDrawer = styled.div`
       margin: 0;
     }
   } 
-  @media (min-width: ${props => props.bpDesktopLg}) {
-    top: ${props => props.headerHeightDesktop};
-  }  
+   
   @media (min-width: ${props => props.bpNavLeftDrawer}) {
     background-color: transparent;
     right: 0;
@@ -110,10 +101,14 @@ const StyledNavLeftDrawer = styled.div`
     }
     ul {
       flex-direction: row;
+      margin: 0;
     }
     html.${ props => props.classToggleHamburgerMobile} & {
       width: auto;
     }  
-  }    
+  }  
+  @media (min-width: ${props => props.bpDesktopLg}) {
+    top: ${props => props.headerHeightDesktop};
+  }   
 
 `;

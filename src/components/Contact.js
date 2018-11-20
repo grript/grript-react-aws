@@ -1,10 +1,7 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
   Route,
-  NavLink, Link,
-  Switch,
-  Redirect
+  NavLink,
 } from 'react-router-dom';
 import ContactChild from './ContactChild';
 
