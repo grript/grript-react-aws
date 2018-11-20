@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components"
-import { BpNavDropdown, ColorBgIsActiveLink } from './Variables';
+import { BpNavDropdown, ColorBgLinkIsActive } from './Variables';
 
 import {
   BrowserRouter as Router,
@@ -19,7 +19,7 @@ let handleMouseLeave = (_event, _self) => {
 const NavDropdown = () => {
   return (
       <MainNavTag className="nav-primary" aria-label="Primary Navigation" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} colorBgNavDropdown={ColorBgNavDropdown} bpNavDropdown={BpNavDropdown}>
-        <MainNavUl bpNavDropdown={BpNavDropdown} colorBgIsActiveLink={ColorBgIsActiveLink}>
+        <MainNavUl bpNavDropdown={BpNavDropdown} ColorBgLinkIsActive={ColorBgLinkIsActive}>
           <MainNavLink><NavLink exact={true} activeClassName='is-active' exact={true} activeClassName='is-active' to="/">Home</NavLink></MainNavLink>
           <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/about">About</NavLink></MainNavLink>
           <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/blog">Blog</NavLink></MainNavLink>
@@ -41,7 +41,7 @@ const MainNavUl = styled.ul`
   display: flex;
   flex-direction: column;
   a.is-active {
-    background-color: ${props => props.colorBgIsActiveLink};
+    background-color: ${props => props.ColorBgLinkIsActive};
   }
   @media (min-width: ${props => props.bpNavDropdown}) {
     flex-direction: row;

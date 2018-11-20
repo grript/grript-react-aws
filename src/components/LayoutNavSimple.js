@@ -1,11 +1,11 @@
 import React from 'react';
-import HeaderWithNavDropdown from './HeaderWithNavDropdown';
+import HeaderSimple from './HeaderSimple';
 import RoutesContent from './RoutesContent';
 
-const LayoutWithNavDropdown = () => {
+const LayoutNavSimple = () => {
   return (
     <div>
-      <HeaderWithNavDropdown />
+      <HeaderSimple />
       <main>
         <div className="container">
           <RoutesContent />
@@ -14,4 +14,4 @@ const LayoutWithNavDropdown = () => {
     </div>  
   );
 }
-export default LayoutWithNavDropdown;
+export default LayoutNavSimple;

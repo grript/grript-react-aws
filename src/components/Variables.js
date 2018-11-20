@@ -13,7 +13,7 @@ export const ColorFooterText = ColorMidnightBlueContrast;
 export const ColorFooterBg = ColorMidnightBlue;
 export const ColorBgNavLeftDrawer = ColorGrayDark;
 export const ColorBgLinkHoverNavSideDrawer = '#555';
-export const ColorBgIsActiveLink = '#555';
+export const ColorBgLinkIsActive = '#555';
 
 
 // breakpoints

@@ -10,8 +10,6 @@ import {
 } from 'react-router-dom';
 
 import { ClassLayoutMainDesktop } from './Variables';
-// import LayoutContainer1 from  './LayoutContainer1';
-// import LayoutContainer2 from  './LayoutContainer2';
 import RoutesLayout from './RoutesLayout';
 
 const class_name = ClassLayoutMainDesktop;

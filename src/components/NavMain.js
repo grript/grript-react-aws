@@ -9,9 +9,7 @@ import {
   Redirect
 } from 'react-router-dom';
 
-import { ColorBgSidebarMobile } from './Variables'; 
-
-// const RenderedComponentDemo = () => <ComponentDemo>Hello Demos!</ComponentDemo>;
+import { ColorBgSidebarMobile, ColorBgLinkIsActive } from './Variables'; 
 
 const NavMain = () => {
   return (
@@ -52,7 +50,7 @@ const MainNavTag = styled.nav`
 // variation: NavMainSidebar
 export const NavMainSidebar = () => {
   return (
-      <StyledNavMainSidebar bgColor={ColorBgSidebarMobile}>
+      <StyledNavMainSidebar bgColor={ColorBgSidebarMobile} colorBgLinkIsActive={ColorBgLinkIsActive}>
         <NavMain />
       </StyledNavMainSidebar>
   );
@@ -73,6 +71,9 @@ const StyledNavMainSidebar = styled.div`
         &:hover {
           background-color: #666;
         }
+      }
+      a.is-active {
+        background-color: ${props => props.colorBgLinkIsActive};
       }
     }
   }

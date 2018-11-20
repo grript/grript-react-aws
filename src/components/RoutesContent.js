@@ -28,13 +28,13 @@ const RoutesContent = () => {
         <Route path="/contact" component={Contact} />
         <Route path="/login" component={Login} />
         <Route path="/demos" component={Demos} />
-        <Route path="/layout-with-header" component={ContentSimple} />
-        <Route path="/layout-with-nav-dropdown" component={ContentSimple} />
-        <Route path="/layout-left-drawer" component={ContentSimple} />
+        <Route path="/layout-nav-simple" component={ContentSimple} />
+        <Route path="/layout-nav-dropdown" component={ContentSimple} />
+        <Route path="/layout-nav-as-left-drawer" component={ContentSimple} />
+        <Route path="/layout-sidebar-left-drawer-and-nav-dropdown" component={ContentSimple} />
         <PrivateRoute authed={fakeAuth.isAuthenticated} path="/admin" component={Admin} />
       </Switch>
     </div>
-
   );
 }
 export default RoutesContent;

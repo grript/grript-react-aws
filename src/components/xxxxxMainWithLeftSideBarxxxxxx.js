@@ -1,7 +1,9 @@
+// should be deprecated as this is in Main.js
+
 import React from 'react';
 import styled from "styled-components";
 
-import RoutesTopLevel from './RoutesTopLevel';
+import RoutesContent from './RoutesContent';
 import { BpDesktop } from './Variables';
 import { ClassToggleSidebar } from './Variables';
 import { WidthLayoutMainDesktop } from './Variables';
@@ -15,7 +17,7 @@ const MainWithLeftSidebar = () => {
   return (
     <MainTag className="main-content with-left-sidebar" bpDesktop={BpDesktop} WidthLayoutMainDesktop={WidthLayoutMainDesktop} ClassToggleSidebar={ClassToggleSidebar}>
       <div className="container center container-mobile">
-        <RoutesTopLevel />
+        <RoutesContent />
       </div>  
     </MainTag>
   );
