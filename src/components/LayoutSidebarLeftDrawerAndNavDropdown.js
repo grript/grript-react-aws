@@ -10,6 +10,7 @@ import NavSidebar from './NavSidebar';
 import { MainWithLeftSidebarDrawer } from './Main';
 import { ButtonCloseSidebarLeft } from './ButtonCloseSidebar';
 import { ButtonLoginWrapper } from './ButtonLogin'; 
+import { SearchFormSidebar } from './Search';
 
 const LayoutSidebarLeftDrawerAndNavDropdown = () => {
   return (
@@ -29,6 +30,7 @@ const LayoutSidebarLeftDrawerAndNavDropdown = () => {
       <ButtonCloseSidebarLeft />
       <SidebarFixed>
         <SidebarInner>
+          <SearchFormSidebar />
           <NavSidebar />
         </SidebarInner>
       </SidebarFixed>

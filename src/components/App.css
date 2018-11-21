@@ -8,6 +8,14 @@ p {
 a:hover {
   cursor: pointer;
 }
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+.icon {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   max-height: 30px;
