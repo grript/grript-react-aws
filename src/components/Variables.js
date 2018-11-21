@@ -24,7 +24,7 @@ export const BpDesktopLg = '1200px';
 export const BpNavDropdown = BpDesktop;
 export const BpNavHamburger = BpDesktop;
 export const BpNavLeftDrawer = '900px';
-export const BpNavLeftDrawerDesktop = '1350px';
+export const BpNavLeftDrawerDesktop = '1400px';
 
 // ToggleMenu classes 
 export const ClassToggleSidebarSwipeLeftOnly = 'toggle-for-sidebar-has-been-clicked';
@@ -37,8 +37,8 @@ export const ClassToggleSidebar = ClassToggleHamburger;
 
 // layout 
 export const ClassLayoutMainDesktop = 'sidebar-is-left-column-on-desktop';
-export const WidthLayoutSidebarTablet = '30%';
-export const WidthLayoutSidebarDesktop = '30%';
+export const WidthLayoutSidebarTablet = '260px';
+export const WidthLayoutSidebarDesktop = '280px';
 export const WidthLayoutMainDesktop = '70%';
 export const WidthContainer = '700px';
 export const WidthContainerHeader = '900px';
@@ -49,9 +49,11 @@ export const HeaderHeightTablet = '40px';
 export const HeaderHeightDesktop = '50px';
 
 // sidebar 
-export const WidthSidebarPhone = '180px';
+export const WidthSidebarPhone = '220px';
 export const WidthSidebarTablet = '250px';
-export const WidthSidebarDesktop = '300px';
+export const WidthSidebarDesktop = '280px';
+export const WidthMaxSidebar = '280px';
+export const MarginLeftMainWhenDrawerIsOpenDesktop = '330px'; // on desktop only
 
 // logo width
 export const LogoWidthPhone = '37px';
@@ -60,3 +62,15 @@ export const LogoWidthTablet = '40px';
 export const LogoHeightTablet = '28px';
 export const LogoWidthDesktop = '50px';
 export const LogoHeightDesktop = '33px';
+
+//button width and height
+export const WidthButtonCloseSidebar = '40px';
+export const HeightButtonCloseSidebar = '40px';
+// must be WidthMaxSidebar +  WidthButtonCloseSidebar
+export const WidthMaxButtonCloseSidebarWrapper = '340px';
+// WidthSidebarPhone + WidthButtonCloseSidebar
+export const WidthButtonCloseSidebarWrapperPhone = '260px';
+// WidthSidebarTablet + WidthButtonCloseSidebar
+export const WidthButtonCloseSidebarWrapperTablet = '290px';
+// WidthSidebarDesktop + WidthButtonCloseSidebar
+export const WidthButtonCloseSidebarWrapperDesktop = '320px';

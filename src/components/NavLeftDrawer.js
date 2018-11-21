@@ -32,7 +32,12 @@ class NavLeftDrawer extends React.Component {
 
   render() {
     return (
-      <StyledNavLeftDrawer className="nav-primary nav-left-drawer" aria-label="Primary Navigation" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave} colorBgLinkHoverNavSideDrawer={ColorBgLinkHoverNavSideDrawer} classToggleHamburgerMobile={ClassToggleHamburgerMobile} colorBgNavLeftDrawer={ColorBgNavLeftDrawer} bpNavLeftDrawer={BpNavLeftDrawer} bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
+      <StyledNavLeftDrawer className="nav-primary nav-left-drawer" aria-label="Primary Navigation"
+        colorBgLinkHoverNavSideDrawer={ColorBgLinkHoverNavSideDrawer} 
+        classToggleHamburgerMobile={ClassToggleHamburgerMobile} 
+        colorBgNavLeftDrawer={ColorBgNavLeftDrawer} 
+        bpNavLeftDrawer={BpNavLeftDrawer} bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} 
+        headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
         <NavMain />
       </StyledNavLeftDrawer>
     );

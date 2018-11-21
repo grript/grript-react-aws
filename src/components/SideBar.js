@@ -6,13 +6,16 @@ import { ColorBgSidebarMobile, ColorBgSidebarDesktop  } from './Variables';
 import { ClassToggleHamburgerMobile, ClassToggleHamburgerDesktop } from  './Variables';
 import { BpTablet, BpDesktop, BpNavLeftDrawer } from  './Variables';
 import { HeaderHeightTablet, HeaderHeightDesktop } from  './Variables';
-import { WidthLayoutSidebarTablet, WidthLayoutSidebarDesktop } from  './Variables';
+import { WidthMaxSidebar, WidthSidebarPhone, WidthLayoutSidebarTablet, WidthLayoutSidebarDesktop } from  './Variables';
 import ButtonCloseSidebar from './ButtonCloseSidebar';
 
 
 const Sidebar = () => {
   return (
-      <SidebarTag  className="sidebar" role="navigation" aria-label="Sidebar navigation" bgColor={ColorBgSidebarMobile} classToggleSidebar={ClassToggleSidebar}>
+      <SidebarTag  className="sidebar" role="navigation" aria-label="Sidebar navigation" 
+        bgColor={ColorBgSidebarMobile} 
+        classToggleSidebar={ClassToggleSidebar}
+        widthMaxSidebar={WidthMaxSidebar}>
         <SidebarTagInner className="sidebar-inner">
           <NavMain />
         </SidebarTagInner>
@@ -32,7 +35,7 @@ const SidebarTag = styled.section`
   left: 0;
   height: 100%;
   transition: all .3s ease;
-  max-width: 300px;
+  max-width: ${props => props.widthMaxSidebar};
   ul li {
     margin: 12px 0;
   }
@@ -58,7 +61,16 @@ let handleMouseLeave = () => {
 
 export const SidebarFixed = (props) => {
   return (
-    <StyledSidebarFixed  className="sidebar sidebar-fixed sidebar-as-left-column-on-desktop" role="navigation" aria-label="Sidebar navigation" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} colorBgSidebarMobile={ColorBgSidebarMobile} colorBgSidebarDesktop={ColorBgSidebarDesktop} classToggleHamburgerMobile={ClassToggleHamburgerMobile} classToggleHamburgerDesktop={ClassToggleHamburgerDesktop} bpTablet={BpTablet} bpDesktop={BpDesktop} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop} widthLayoutSidebarTablet={WidthLayoutSidebarTablet} widthLayoutSidebarDesktop={WidthLayoutSidebarDesktop} bpNavLeftDrawer={BpNavLeftDrawer}>
+    <StyledSidebarFixed  className="sidebar sidebar-fixed sidebar-as-left-column-on-desktop" role="navigation" aria-label="Sidebar navigation" 
+        onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} 
+        colorBgSidebarMobile={ColorBgSidebarMobile} colorBgSidebarDesktop={ColorBgSidebarDesktop} 
+        classToggleHamburgerMobile={ClassToggleHamburgerMobile} classToggleHamburgerDesktop={ClassToggleHamburgerDesktop} 
+        bpTablet={BpTablet} bpDesktop={BpDesktop} 
+        headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop} 
+        widthSidebarPhone={WidthSidebarPhone}
+        widthLayoutSidebarTablet={WidthLayoutSidebarTablet} widthLayoutSidebarDesktop={WidthLayoutSidebarDesktop} 
+        widthMaxSidebar={WidthMaxSidebar}
+        bpNavLeftDrawer={BpNavLeftDrawer}>
       {props.children}
     </StyledSidebarFixed>
   );
@@ -72,11 +84,11 @@ const StyledSidebarFixed = styled.aside`
   left: 0;
   height: 100%;
   transition: all .75s ease;
-  max-width: 300px;
+  max-width: ${props => props.widthMaxSidebar};
   overflow-y: auto;
 
   html.${props => props.classToggleHamburgerMobile} & {
-    width: 180px;
+    width: ${props => props.widthSidebarPhone}
     transition: all .75s ease;
   }
   @media (min-width:${props => props.bpTablet}) {
