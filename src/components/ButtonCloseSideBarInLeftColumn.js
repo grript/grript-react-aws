@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 import { ColorBgSidebarMobile } from './Variables'; 
 import { ClassToggleSidebar } from  './Variables';
 import { BpDesktop } from  './Variables';

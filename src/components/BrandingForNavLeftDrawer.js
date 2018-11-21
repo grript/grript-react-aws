@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 import { BpNavLeftDrawer } from './Variables'; 
 import Branding from './Branding'; 
 import { LogoWidthPhone, LogoWidthTablet, LogoWidthDesktop } from './Variables';   

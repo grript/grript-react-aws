@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 import { BpNavDropdown } from './Variables';
 
 class ButtonDownArrow extends React.Component {

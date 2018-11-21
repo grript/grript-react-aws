@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../logo.svg';
-import styled from "styled-components";
+import styled from 'styled-components';
 import { LogoWidthPhone, LogoWidthTablet, LogoWidthDesktop, LogoHeightPhone, LogoHeightTablet, LogoHeightDesktop } from './Variables';   
 import { BpTablet, BpDesktop, BpDesktopLg } from './Variables';   
 import { BpNavLeftDrawer } from './Variables'; 

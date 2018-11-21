@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 import NavMain from './NavMain';
 import { BpTablet } from './Variables';
 import { BpDesktop } from './Variables';
