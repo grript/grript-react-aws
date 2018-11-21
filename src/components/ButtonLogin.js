@@ -35,7 +35,7 @@ export const ButtonLoginWrapper = () => {
 }
 
 const StyledButtonLoginWrapper = styled.div`
-  margin-left: auto;
+  margin-left: 0;
   margin-right: 1em;
   @media (min-width: ${props => props.bpDesktop}) {
     // margin-left: 0;

@@ -10,7 +10,7 @@ import NavSidebar from './NavSidebar';
 import { MainWithLeftSidebarDrawer } from './Main';
 import { ButtonCloseSidebarLeft } from './ButtonCloseSidebar';
 import { ButtonLoginWrapper } from './ButtonLogin'; 
-import { SearchFormSidebar } from './Search';
+import { SearchFormSidebar, SearchButtonHeader, SearchBlockDropdown } from './Search';
 
 const LayoutSidebarLeftDrawerAndNavDropdown = () => {
   return (
@@ -20,6 +20,8 @@ const LayoutSidebarLeftDrawerAndNavDropdown = () => {
           <ButtonHamburger />
           <ButtonHamburgerDesktop />
           <BrandingWithHamburgerAlways />
+          <SearchButtonHeader />
+          <SearchBlockDropdown />
           <ButtonLoginWrapper />
           <NavDropdown />
           <ButtonDownArrow />

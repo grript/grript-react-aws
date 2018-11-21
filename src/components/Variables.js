@@ -1,7 +1,7 @@
 // colors
 const ColorPrimary = '#1F484F';
 const ColorSecondary = '#195660';
-const ColorGrayDark = '#3e464a';
+export const ColorGrayDark = '#3e464a';
 const ColorMidnightBlue = '#152a45';
 const ColorMidnightBlueContrast = '#8b9fb0';
 const ColorGrayBlue = '#566c7f';
@@ -34,6 +34,7 @@ export const ClassToggleHamburger = 'nav-hamburger-trigger-is-clicked';
 export const ClassToggleHamburgerMobile = 'nav-hamburger-trigger-is-clicked-on-mobile';
 export const ClassToggleHamburgerDesktop = 'nav-hamburger-trigger-is-clicked-on-desktop';
 export const ClassToggleSidebar = ClassToggleHamburger;
+export const ClassToggleSearchBlockDropdown = 'search-icon-in-header-is-clicked';
 
 // layout 
 export const ClassLayoutMainDesktop = 'sidebar-is-left-column-on-desktop';
