@@ -5,6 +5,9 @@ body {
 p {
   margin-bottom: 1.5em;
 }
+a:hover {
+  cursor: pointer;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   max-height: 30px;

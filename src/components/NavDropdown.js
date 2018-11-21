@@ -62,6 +62,7 @@ const MainNavTag = styled.nav`
   position: absolute;
   top: 100%;
   right: 0;
+  margin-left: 0;
   max-height: 0;
   padding: 0;
   overflow: hidden;
