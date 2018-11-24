@@ -16,6 +16,9 @@ input[type="submit"]:hover {
   background-size: 100%;
   background-position: center center;
 }
+.box-shadow {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   max-height: 30px;
