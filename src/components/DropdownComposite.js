@@ -27,7 +27,7 @@ class DropdownComposite extends React.Component {
         marginLeft={this.props.marginLeft} marginRight={this.props.marginRight}
         positionRight={this.props.positionRight} >
         <a className="dropdown-trigger" onClick={this.handleClick}>{<this.props.trigger/>}</a>
-        <div className="dropdown-collapsible box-shadow">{<this.props.dropdown />}</div>
+        <div className="dropdown-collapsible box-shadow">{<this.props.collapsible />}</div>
       </StyledDropdownComposite>
       );
   }
