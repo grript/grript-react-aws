@@ -37,7 +37,8 @@ class NavLeftDrawer extends React.Component {
         classToggleHamburgerMobile={ClassToggleHamburgerMobile} 
         colorBgNavLeftDrawer={ColorBgNavLeftDrawer} 
         bpNavLeftDrawer={BpNavLeftDrawer} bpTablet={BpTablet} bpDesktop={BpDesktop} bpDesktopLg={BpDesktopLg} 
-        headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}>
+        headerHeightPhone={HeaderHeightPhone} headerHeightTablet={HeaderHeightTablet} headerHeightDesktop={HeaderHeightDesktop}
+        onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
         <NavMain />
       </StyledNavLeftDrawer>
     );
