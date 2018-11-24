@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ColorGrayDark, BpDesktop, ClassToggleSearchBlockDropdown } from './Variables';
-
+import DropdownComposite from './DropdownComposite';
 
 const SearchForm = () => {
   return (
@@ -117,3 +117,19 @@ const StyledSearchBlockDropdown = styled.div`
     // right: 20%;
   }
 `;
+
+
+export const SearchDropdownComposite = () => {
+  return (
+    <DropdownComposite className="DropdownSearch" 
+    trigger={SearchCircularIcon} collapsible={SearchBlockDropdown} 
+    marginLeft={marginLeft}
+    marginRight={marginRight} 
+    positionRight={positionRight} />
+  );
+}
+
+
+const positionRight = '-50px';
+const marginLeft = 'auto';
+const marginRight = '1em';

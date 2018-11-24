@@ -6,7 +6,7 @@ import { SearchCircularIcon, SearchBlockDropdown } from './Search';
 const DropdownSearch = () => {
   return (
     <DropdownComposite className="DropdownSearch" 
-    trigger={trigger} dropdown={dropdown} 
+    trigger={trigger} collapsible={collapsible} 
     marginLeft={marginLeft}
     marginRight={marginRight} 
     positionRight={positionRight} />
@@ -21,7 +21,7 @@ const trigger = () => {
   );
 }
 
-const dropdown = () => {
+const collapsible = () => {
   return (
     <SearchBlockDropdown />
   );
