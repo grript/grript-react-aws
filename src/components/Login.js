@@ -95,7 +95,7 @@ export const LoginCollapsible = () => {
 }
 
 const StyledLoginCollapsible = styled.div`
-  background-color: ${props => props.colorGrayDark};
+  margin: 1em;
 `;
 
 export const LoginDropdownComposite = () => {

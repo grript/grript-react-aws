@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ColorGrayDark, BpDesktop, ClassToggleSearchBlockDropdown } from './Variables';
+import { ColorBgDropdown, ColorGrayDark, BpDesktop, ClassToggleSearchBlockDropdown } from './Variables';
 import DropdownComposite from './DropdownComposite';
 
 const SearchForm = () => {
@@ -100,7 +100,7 @@ const StyledSearchCircularIcon = styled.span`
 export const SearchBlockDropdown = () => {
   return (
     <StyledSearchBlockDropdown className="search-block-dropdown"
-      colorGrayDark={ColorGrayDark}
+      colorBgDropdown={ColorBgDropdown}
       bpDesktop = {BpDesktop}>
       <SearchFormBlock />
     </StyledSearchBlockDropdown>
@@ -109,7 +109,7 @@ export const SearchBlockDropdown = () => {
 
 const StyledSearchBlockDropdown = styled.div`
   padding: 0 1em;
-  background-color: ${props => props.colorGrayDark};
+  background-color: ${props => props.colorBgDropdown};
   form {
     margin: 30px 0;
   }
