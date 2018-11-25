@@ -12,6 +12,7 @@ import { ButtonCloseSidebarLeft } from './ButtonCloseSidebar';
 import { SearchFormBlock } from './Search';
 import { SearchDropdownComposite } from './Search';
 import { LoginDropdownComposite } from './Login';
+import NavDropdownComposite from './NavDropdownComposite';
 
 
 const LayoutSidebarLeftDrawerAndNavDropdown = () => {
@@ -24,8 +25,7 @@ const LayoutSidebarLeftDrawerAndNavDropdown = () => {
           <BrandingWithHamburgerAlways />
           <SearchDropdownComposite />
           <LoginDropdownComposite />
-          <NavDropdown />
-          <ButtonDownArrow />
+          <NavDropdownComposite />
         </HeaderContainerFull>
       </HeaderFixed>
       <HeaderHeight />

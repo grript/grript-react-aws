@@ -15,6 +15,7 @@ export const ColorFooterBg = ColorMidnightBlue;
 export const ColorBgNavLeftDrawer = ColorGrayDark;
 export const ColorBgLinkHoverNavSideDrawer = '#555';
 export const ColorBgLinkIsActive = '#555';
+export const ColorBgLinkHoverNavDropdown = '#333';
 
 
 // breakpoints
