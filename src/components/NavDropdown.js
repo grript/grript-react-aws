@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components"
-import { BpNavDropdown, ColorBgLinkIsActive } from './Variables';
+import { BpNavDropdown, BpNavDropdownNum, ColorBgLinkIsActive } from './Variables';
 
 import {
   BrowserRouter as Router,
@@ -11,7 +11,9 @@ import {
 import { ColorBgNavDropdown } from './Variables'; 
 
 let handleMouseEnter = (_event, _self) => {
-  document.documentElement.classList.add('overflow-hidden');
+  if (document.body.clientWidth <= BpNavDropdownNum) {
+    document.documentElement.classList.add('overflow-hidden');
+  }  
 }  
 let handleMouseLeave = (_event, _self) => {
   document.documentElement.classList.remove('overflow-hidden');
@@ -23,6 +25,8 @@ const NavDropdown = () => {
           <MainNavLink><NavLink exact={true} activeClassName='is-active' exact={true} activeClassName='is-active' to="/">Home</NavLink></MainNavLink>
           <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/about">About</NavLink></MainNavLink>
           <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/blog">Blog</NavLink></MainNavLink>
+          <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/contact">Contact</NavLink></MainNavLink>
+          <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/contact">Contact</NavLink></MainNavLink>
           <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/contact">Contact</NavLink></MainNavLink>
         </MainNavUl>
       </MainNavTag>
@@ -65,7 +69,7 @@ const MainNavTag = styled.nav`
   margin-left: 0;
   max-height: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-y: auto;
   transition: .5s all ease;
   background-color: ${props => props.colorBgNavDropdown};
 

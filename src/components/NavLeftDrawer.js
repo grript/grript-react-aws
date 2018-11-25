@@ -24,7 +24,9 @@ class NavLeftDrawer extends React.Component {
   }
 
   handleMouseEnter() {
-    document.documentElement.classList.add('overflow-hidden');
+    if (document.body.clientWidth <= BpNavLeftDrawer) {
+      document.documentElement.classList.add('overflow-hidden');
+    }  
   }  
   handleMouseLeave() {
     document.documentElement.classList.remove('overflow-hidden');
