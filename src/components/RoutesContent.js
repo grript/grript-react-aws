@@ -16,6 +16,7 @@ import Login, { fakeAuth } from './Login';
 import Admin from './Admin';
 import Demos from './Demos';
 import ContentSimple from './ContentSimple';
+import ReduxList from './ReduxList';
 
 const RoutesContent = () => {
   return (
@@ -32,6 +33,8 @@ const RoutesContent = () => {
         <Route path="/layout-nav-as-left-drawer" component={ContentSimple} />
         <Route path="/layout-sidebar-left-drawer-and-nav-dropdown" component={ContentSimple} />
         <PrivateRoute authed={fakeAuth.isAuthenticated} path="/admin" component={Admin} />
+        <Route path="/learn-redux" component={ReduxList} />
+
       </Switch>
     </div>
   );

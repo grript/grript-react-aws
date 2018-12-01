@@ -13,6 +13,7 @@ import LayoutNavSimple from './LayoutNavSimple';
 import LayoutNavDropdown from './LayoutNavDropdown';
 import LayoutNavLeftDrawer from './LayoutNavLeftDrawer';
 import LayoutSidebarLeftDrawerAndNavDropdown from './LayoutSidebarLeftDrawerAndNavDropdown';
+import Layout1ColContentDynamic from './Layout1ColContentDynamic';
 
 const RoutesLayout = () => {
   return (
@@ -29,6 +30,7 @@ const RoutesLayout = () => {
         <Route path="/layout-nav-dropdown" component={LayoutNavDropdown} />
         <Route path="/layout-nav-as-left-drawer" component={LayoutNavLeftDrawer} />
         <Route path="/layout-sidebar-left-drawer-and-nav-dropdown" component={LayoutSidebarLeftDrawerAndNavDropdown} />
+        <Route path="/learn-redux" component={Layout1ColContentDynamic} />
       </Switch>
     </div>
 
