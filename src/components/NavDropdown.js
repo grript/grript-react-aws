@@ -14,7 +14,7 @@ let handleMouseEnter = (_event, _self) => {
   if (document.body.clientWidth <= BpNavDropdownNum) {
     document.documentElement.classList.add('overflow-hidden');
   }  
-}  
+}
 let handleMouseLeave = (_event, _self) => {
   document.documentElement.classList.remove('overflow-hidden');
 }  

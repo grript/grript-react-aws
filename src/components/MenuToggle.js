@@ -26,7 +26,6 @@ class MenuToggleClass extends React.Component {
 
   handleClick = (e) => {
     e.preventDefault();
-    console.log("Toggle menu 2 is clicked!");
     this.props.toggleMenu();
   }
 
