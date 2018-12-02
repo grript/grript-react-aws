@@ -15,10 +15,11 @@ class Counter extends React.Component {
     return (
       <StyledCounter className='counter-widget'>
         <h3>Counter</h3>
-        
-        <CounterIncrement />
-        <span className="count">{this.props.count}</span>
-        <CounterDecrement />
+        <div className="panel">  
+          <CounterIncrement />
+          <span className="count">{this.props.count}</span>
+          <CounterDecrement />
+        </div>  
       </StyledCounter>
     )
   }  
@@ -37,8 +38,16 @@ const StyledCounter = styled.div`
   border: 1px solid #ddd;
   border-radius: 3px;
   dispay: inline-block;
-  max-width: 300px;
+  max-width: 260px;
   padding: 1em;
+  h3 {
+    margin-top: 0;
+  }
+  .panel {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
   .count {
     display: inline-block;
     min-width: 60px;
@@ -48,7 +57,5 @@ const StyledCounter = styled.div`
   }
   button {
     font-size: 20px;
-  }
-  .button-add {
   }
 `;
