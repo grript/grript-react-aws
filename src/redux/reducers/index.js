@@ -1,9 +1,11 @@
 import { ADD_ARTICLE } from '../constants/action-types';
 import { TOGGLE_MENU } from '../constants/action-types';
+import { INCREMENT, DECREMENT } from '../constants/action-types';
 
 const initialState = {
   articles: [],
-  menuToggleIsClicked: false
+  menuToggleIsClicked: false,
+  count: 0
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -11,8 +13,11 @@ const rootReducer = (state = initialState, action) => {
     case ADD_ARTICLE:
       return { ...state, articles: [...state.articles, action.payload] };
     case TOGGLE_MENU:
-      console.log('state', state);
       return { ...state, menuToggleIsClicked: !state.menuToggleIsClicked};  
+    case INCREMENT:
+      return { ...state, count: state.count + 1}  
+    case DECREMENT:
+      return { ...state, count: state.count - 1} 
     default: 
       return state;
   }  
