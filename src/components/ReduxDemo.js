@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import FormAddArticle from './FormAddArticle';
 import MenuToggle from './MenuToggle';
+import Counter from './Counter';
 
 const mapStateToProps = state => {
   return { articles: state.articles };
@@ -14,6 +15,7 @@ const ReduxList = ({ articles }) => {
           <h2>Add a new article</h2>
           <FormAddArticle />
           <MenuToggle />
+          <Counter />
           <ul className="list-group list-group-flush">
             {articles.map(el => (
             <li className="list-group-item" key={el.id}>
