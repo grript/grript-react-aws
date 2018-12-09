@@ -4,6 +4,7 @@
 .amplifyrc
 /amplify
 /src/aws-exports.js
+.graphqlconfig.yml
 
 # dependencies
 /node_modules

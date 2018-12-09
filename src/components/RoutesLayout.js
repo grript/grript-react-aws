@@ -31,6 +31,7 @@ const RoutesLayout = () => {
         <Route path="/layout-nav-as-left-drawer" component={LayoutNavLeftDrawer} />
         <Route path="/layout-sidebar-left-drawer-and-nav-dropdown" component={LayoutSidebarLeftDrawerAndNavDropdown} />
         <Route path="/learn-redux" component={Layout1ColContentDynamic} />
+        <Route path="/teams" component={Layout1ColContentDynamic} />
       </Switch>
     </div>
 

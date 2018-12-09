@@ -17,6 +17,7 @@ import Admin from './Admin';
 import Demos from './Demos';
 import ContentSimple from './ContentSimple';
 import ReduxDemo from './ReduxDemo';
+import TeamsGetAll from './TeamsGetAll';
 
 const RoutesContent = () => {
   return (
@@ -34,6 +35,7 @@ const RoutesContent = () => {
         <Route path="/layout-sidebar-left-drawer-and-nav-dropdown" component={ContentSimple} />
         <PrivateRoute authed={fakeAuth.isAuthenticated} path="/admin" component={Admin} />
         <Route path="/learn-redux" component={ReduxDemo} />
+        <Route path="/teams" component={TeamsGetAll} />
 
       </Switch>
     </div>
