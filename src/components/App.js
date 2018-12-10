@@ -24,6 +24,25 @@ const client = new AWSAppSyncClient({
   auth: {
     type: appSyncConfig.aws_appsync_authenticationType,
     apiKey: appSyncConfig.aws_appsync_apiKey,
+  },
+  cacheOptions: {
+    dataIdFromObject: (obj) => {
+      let id = defaultDataIdFromObject(obj);
+      console.log('cache options obj',obj);
+      console.log('cache options id', id);
+      if (!id) {
+        const { __typename: typename } = obj;
+        console.log('typename', typename);
+        switch (typename) {
+          case 'Team':
+            return `${typename}:${obj.teamId}`;
+          default:
+            return "sdsdsdsrocks";  // xxxx warning: this should not be id nor a fixed string. but fixed string seems to work .
+        }
+      }
+
+      return id;
+    }
   }
 });
 
