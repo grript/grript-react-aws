@@ -18,6 +18,7 @@ import Demos from './Demos';
 import ContentSimple from './ContentSimple';
 import ReduxDemo from './ReduxDemo';
 import TeamsGetAll from './TeamsGetAll';
+import LoginCognito from './LoginCognito';
 
 const RoutesContent = () => {
   return (
@@ -36,6 +37,7 @@ const RoutesContent = () => {
         <PrivateRoute authed={fakeAuth.isAuthenticated} path="/admin" component={Admin} />
         <Route path="/learn-redux" component={ReduxDemo} />
         <Route path="/teams" component={TeamsGetAll} />
+        <Route path="/login-cognito" component={LoginCognito} />
 
       </Switch>
     </div>

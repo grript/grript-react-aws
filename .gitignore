@@ -6,6 +6,9 @@
 /src/aws-exports.js
 .graphqlconfig.yml
 
+#config
+config.js
+
 # dependencies
 /node_modules
 /.pnp

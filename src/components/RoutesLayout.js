@@ -32,6 +32,7 @@ const RoutesLayout = () => {
         <Route path="/layout-sidebar-left-drawer-and-nav-dropdown" component={LayoutSidebarLeftDrawerAndNavDropdown} />
         <Route path="/learn-redux" component={Layout1ColContentDynamic} />
         <Route path="/teams" component={Layout1ColContentDynamic} />
+        <Route path="/login-cognito" component={Layout1ColContentDynamic} />
       </Switch>
     </div>
 

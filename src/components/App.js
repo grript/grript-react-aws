@@ -16,6 +16,10 @@ import { Rehydrated } from "aws-appsync-react";
 import { ClassLayoutMainDesktop } from './Variables';
 import RoutesLayout from './RoutesLayout';
 
+import Amplify from "aws-amplify";
+import config from "../config";
+
+
 const class_name = ClassLayoutMainDesktop;
 
 const client = new AWSAppSyncClient({
@@ -66,3 +70,14 @@ const WithProvider = () => (
 );
 
 export default WithProvider;
+
+
+Amplify.configure({
+  Auth: {
+    mandatorySignIn: true,
+    region: config.cognito.REGION,
+    userPoolId: config.cognito.USER_POOL_ID,
+    identityPoolId: config.cognito.IDENTITY_POOL_ID,
+    userPoolWebClientId: config.cognito.APP_CLIENT_ID
+  }
+});
