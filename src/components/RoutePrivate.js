@@ -9,7 +9,7 @@ import {
 
 import { fakeAuth } from './Login'; 
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
+const RoutePrivate = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
     fakeAuth.isAuthenticated ? (
       <Component {...props}/>
@@ -22,4 +22,4 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   )}/>
 )
 
-export default PrivateRoute;
+export default RoutePrivate;

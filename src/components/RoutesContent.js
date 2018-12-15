@@ -11,7 +11,7 @@ import Blog from './Blog';
 import Contact from './Contact';
 import Home from './Home';
 
-import PrivateRoute from './PrivateRoute';
+import RoutePrivate from './RoutePrivate';
 import Login, { fakeAuth } from './Login'; 
 import Admin from './Admin';
 import Demos from './Demos';
@@ -34,7 +34,7 @@ const RoutesContent = () => {
         <Route path="/layout-nav-dropdown" component={ContentSimple} />
         <Route path="/layout-nav-as-left-drawer" component={ContentSimple} />
         <Route path="/layout-sidebar-left-drawer-and-nav-dropdown" component={ContentSimple} />
-        <PrivateRoute authed={fakeAuth.isAuthenticated} path="/admin" component={Admin} />
+        <RoutePrivate authed={fakeAuth.isAuthenticated} path="/admin" component={Admin} />
         <Route path="/learn-redux" component={ReduxDemo} />
         <Route path="/teams" component={TeamsGetAll} />
         <Route path="/login-cognito" component={LoginCognito} />

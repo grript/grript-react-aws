@@ -14,6 +14,9 @@ import LayoutNavDropdown from './LayoutNavDropdown';
 import LayoutNavLeftDrawer from './LayoutNavLeftDrawer';
 import LayoutSidebarLeftDrawerAndNavDropdown from './LayoutSidebarLeftDrawerAndNavDropdown';
 import Layout1ColContentDynamic from './Layout1ColContentDynamic';
+import LayoutWithPassedContent from './LayoutWithPassedContent';
+import RouteAuthenticated from './RouteAuthenticated';
+import User from './User';
 
 const RoutesLayout = () => {
   return (
@@ -33,6 +36,7 @@ const RoutesLayout = () => {
         <Route path="/learn-redux" component={Layout1ColContentDynamic} />
         <Route path="/teams" component={Layout1ColContentDynamic} />
         <Route path="/login-cognito" component={Layout1ColContentDynamic} />
+        <RouteAuthenticated path="/user" component={User} layout={LayoutWithPassedContent}/>
       </Switch>
     </div>
 

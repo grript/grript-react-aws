@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Auth } from "aws-amplify";
+import { connect } from "react-redux";
+import { loginCognito } from "../redux/actions/index";
 
 class LoginCognito extends React.Component {
   constructor () {
@@ -18,20 +20,21 @@ class LoginCognito extends React.Component {
       [event.target.id]: event.target.value
     });
   }
-  // handleSubmit = event => {
-  //   event.preventDefault();
-  //   console.log('attempting to log in');
-  // }
+
   handleSubmit = async event => {
     event.preventDefault();
     console.log('attempting to log in');
     try {
       await Auth.signIn(this.state.email, this.state.password);
       console.log('logged in');
-      alert("Logged in");
+      //alert("Logged in");
+      console.log(this.props);
+      this.props.loginCognito();
+      console.log(this.props.user);
     } catch (e) {
-      alert(e.message);
+      console.log(e.message);
       console.log('error in logging in');
+      console.log('e' , e);
     }
   }
 
@@ -64,14 +67,31 @@ class LoginCognito extends React.Component {
           <button disabled={!this.validateForm()} type="submit">
             Login  
           </button>  
+
         </form>  
+        <div>
+          user from global state: {this.props.user.name}
+        </div>
       </div>
     );
   }
-  
 }
 
-export default LoginCognito;
+const mapStateToProps = state => {
+  return {
+    user: state.user
+  };
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    loginCognito: () => {
+      dispatch(loginCognito())
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginCognito);
 
 const StyledLabel = styled.label`
   max-width: 100%;
@@ -92,3 +112,5 @@ const StyledInputPassword = styled.input`
   padding: 5px 10px;
   margin-bottom: 1em;
 `;
+// ==========================================================================
+
