@@ -1,17 +1,16 @@
 import React from 'react';
-import styled from "styled-components"
-
-
+import UserLogout from './UserLogout';
 
 class User extends React.Component {
   render() {
     return (
         <div>
-          Rocks 23
+          Rocks 23 user
+          
+          
         </div>
     );
   }  
 }
-
 
 export default User;

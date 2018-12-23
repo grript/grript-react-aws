@@ -2,6 +2,7 @@ import React from 'react';
 import {
   NavLink,
 } from 'react-router-dom';
+import UserLogout from './UserLogout';
 
 
 const NavMain = () => {
@@ -13,6 +14,7 @@ const NavMain = () => {
       <li><NavLink exact={true} activeClassName='is-active' to="/contact">Contact</NavLink></li>
       <li><NavLink exact={true} activeClassName='is-active' to="/admin">Admin</NavLink></li>
       <li><NavLink exact={true} activeClassName='is-active' to="/demos">Demos</NavLink></li>
+      <li><UserLogout /></li>
     </ul>
   );
 }

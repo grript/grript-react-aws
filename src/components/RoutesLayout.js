@@ -14,9 +14,12 @@ import LayoutNavDropdown from './LayoutNavDropdown';
 import LayoutNavLeftDrawer from './LayoutNavLeftDrawer';
 import LayoutSidebarLeftDrawerAndNavDropdown from './LayoutSidebarLeftDrawerAndNavDropdown';
 import Layout1ColContentDynamic from './Layout1ColContentDynamic';
-import LayoutWithPassedContent from './LayoutWithPassedContent';
-import RouteAuthenticated from './RouteAuthenticated';
+import LayoutDefault from './LayoutDefault';
+import RouteAuthenticator from './RouteAuthenticator';
 import User from './User';
+import RouteLayout from './RouteLayout';
+import NoMatch from './NoMatch';
+import LoginCognito from './LoginCognito';
 
 const RoutesLayout = () => {
   return (
@@ -35,8 +38,9 @@ const RoutesLayout = () => {
         <Route path="/layout-sidebar-left-drawer-and-nav-dropdown" component={LayoutSidebarLeftDrawerAndNavDropdown} />
         <Route path="/learn-redux" component={Layout1ColContentDynamic} />
         <Route path="/teams" component={Layout1ColContentDynamic} />
-        <Route path="/login-cognito" component={Layout1ColContentDynamic} />
-        <RouteAuthenticated path="/user" component={User} layout={LayoutWithPassedContent}/>
+        <RouteLayout path="/login-cognito" layout={LayoutDefault} component={LoginCognito} />
+        <RouteAuthenticator path="/user" component={User} layout={LayoutDefault}/>
+        <RouteLayout layout={LayoutDefault} component={NoMatch} />
       </Switch>
     </div>
 

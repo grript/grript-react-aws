@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Auth } from "aws-amplify";
 import { connect } from "react-redux";
-import { loginCognito } from "../redux/actions/index";
+import { userIsAuthenticated } from "../redux/actions/index";
 
 class LoginCognito extends React.Component {
   constructor () {
@@ -29,12 +29,11 @@ class LoginCognito extends React.Component {
       console.log('logged in');
       //alert("Logged in");
       console.log(this.props);
-      this.props.loginCognito();
+      this.props.userIsAuthenticated();
       console.log(this.props.user);
     } catch (e) {
       console.log(e.message);
       console.log('error in logging in');
-      console.log('e' , e);
     }
   }
 
@@ -43,6 +42,7 @@ class LoginCognito extends React.Component {
   }
 
   render () {
+    console.log(this.props.userIsAuthenticated);
     return (
       <div className="login-form">
         <h1>Login Cognito</h1>
@@ -70,7 +70,7 @@ class LoginCognito extends React.Component {
 
         </form>  
         <div>
-          user from global state: {this.props.user.name}
+          user is authenticated: {this.props.userIsAutheticated}
         </div>
       </div>
     );
@@ -79,14 +79,14 @@ class LoginCognito extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    user: state.user
+    userIsAuthenticated: state.userIsAuthenticated
   };
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    loginCognito: () => {
-      dispatch(loginCognito())
+    userIsAuthenticated: () => {
+      dispatch(userIsAuthenticated())
     }
   };
 };

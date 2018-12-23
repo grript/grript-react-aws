@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from "styled-components"
-
+import styled from "styled-components";
+import UserLogout from './UserLogout';
+import UserSignin from './UserSignin'; 
 import {
   BrowserRouter as Router,
   Route,
@@ -22,6 +23,8 @@ const NavSimple = () => {
           <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/about">About</NavLink></MainNavLink>
           <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/blog">Blog</NavLink></MainNavLink>
           <MainNavLink><NavLink exact={true} activeClassName='is-active' to="/contact">Contact</NavLink></MainNavLink>
+          <li><UserSignin /></li>
+          <li><UserLogout /></li>
         </MainNavUl>
       </MainNavTag>
   );
@@ -37,6 +40,10 @@ const MainNavUl = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;
+  li a {
+    color: #fff;
+    text-decoration: none;
+  }
 `;
 const MainNavLink = styled.li`
   margin: 0 1em;

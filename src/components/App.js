@@ -18,6 +18,7 @@ import RoutesLayout from './RoutesLayout';
 
 import Amplify from "aws-amplify";
 import config from "../config";
+import AuthenticatorSyncSessionToState from './AuthenticatorSyncSessionToState';
 
 
 const class_name = ClassLayoutMainDesktop;
@@ -64,6 +65,7 @@ const App = () => (
 const WithProvider = () => (
   <ApolloProvider client={client}>
     <Rehydrated>
+      <AuthenticatorSyncSessionToState />
       <App />
     </Rehydrated>
   </ApolloProvider>
